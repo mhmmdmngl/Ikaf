@@ -1,0 +1,306 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<!-- Slider Bölümü -->
+<div class="slider-container">
+    <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/12/slider22-12.png"
+                         alt="İKAF Slider 1"
+                         class="slide-image" />
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h2>İKAF'25</h2>
+                        <p>Kariyerinize Yön Verin</p>
+                        <a href="#" class="btn btn-register">Hemen Kayıt Ol</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/12/slider22-1-copy.png"
+                         alt="İKAF Slider 2"
+                         class="slide-image" />
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h2>İKAF'25</h2>
+                        <p>Kariyerinize Yön Verin</p>
+                        <a href="#" class="btn btn-register">Hemen Kayıt Ol</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/slider2a.png"
+                         alt="İKAF Slider 3"
+                         class="slide-image" />
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h2>İKAF'25</h2>
+                        <p>Kariyerinize Yön Verin</p>
+                        <a href="#" class="btn btn-register">Hemen Kayıt Ol</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<!-- Hızlı Erişim Bölümü -->
+<section class="quick-access">
+    <div class="container">
+        <div class="quick-access-grid">
+            <div class="quick-access-item">
+                <a href="#" class="quick-card">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/ikaf_ne.png" alt="İKAF Nedir?" />
+                    <div class="quick-overlay">
+                        <span>İKAF Nedir?</span>
+                    </div>
+                </a>
+            </div>
+            <div class="quick-access-item">
+                <a href="#" class="quick-card">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/3_dugme.png" alt="Tanıtım Filmi" />
+                    <div class="quick-overlay">
+                        <span>Tanıtım Filmi</span>
+                    </div>
+                </a>
+            </div>
+            <div class="quick-access-item">
+                <a href="#" class="quick-card">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/kayitol.png" alt="Kayıt Ol" />
+                    <div class="quick-overlay">
+                        <span>Kayıt Ol</span>
+                    </div>
+                </a>
+            </div>
+            <div class="quick-access-item">
+                <a href="#" class="quick-card">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/sposnsorla.png" alt="Sponsorlar" />
+                    <div class="quick-overlay">
+                        <span>Sponsorlar</span>
+                    </div>
+                </a>
+            </div>
+            <div class="quick-access-item">
+                <a href="#" class="quick-card">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/etkinlikler.png" alt="Etkinlikler" />
+                    <div class="quick-overlay">
+                        <span>Etkinlikler</span>
+                    </div>
+                </a>
+            </div>
+            <div class="quick-access-item">
+                <a href="#" class="quick-card">
+                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/fuaralani.png" alt="Fuar Alanı" />
+                    <div class="quick-overlay">
+                        <span>Fuar Alanı</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Countdown ve Sosyal Medya Bölümü -->
+<section class="countdown-section">
+    <div class="countdown-container">
+        <div class="countdown-timer">
+            <div class="countdown-headline">FUARA KALAN SÜRE</div>
+            <div class="countdown-blocks">
+                <div class="countdown-block">
+                    <div id="countdown-days" class="countdown-digit">00</div>
+                    <div class="countdown-label">GÜN</div>
+                </div>
+                <div class="countdown-block">
+                    <div id="countdown-hours" class="countdown-digit">00</div>
+                    <div class="countdown-label">SAAT</div>
+                </div>
+                <div class="countdown-block">
+                    <div id="countdown-minutes" class="countdown-digit">00</div>
+                    <div class="countdown-label">DAKİKA</div>
+                </div>
+                <div class="countdown-block">
+                    <div id="countdown-seconds" class="countdown-digit">00</div>
+                    <div class="countdown-label">SANİYE</div>
+                </div>
+            </div>
+        </div>
+        <div class="social-media-section">
+            <h2 class="social-media-title">Sosyal Medyada Biz</h2>
+            <p class="social-media-subtitle">Güncel duyurular ve etkinlikler için bizi takip edin</p>
+            <div class="social-media-icons">
+                <a href="https://facebook.com/ikaf.2025" target="_blank" class="social-icon-link social-icon-facebook" title="Facebook'ta Takip Et">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/ikaf2025" target="_blank" class="social-icon-link social-icon-twitter" title="X'te Takip Et">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://instagram.com/ikaf.2025" target="_blank" class="social-icon-link social-icon-instagram" title="Instagram'da Takip Et">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Haberler Bölümü -->
+<section class="news-section">
+    <div class="news-header">
+        <h2 class="news-title">Son Gelişmeler</h2>
+        <p class="news-subtitle">İKAF'25 ile ilgili en güncel haberler ve duyurular</p>
+    </div>
+    <div class="news-grid">
+        <article class="news-card">
+            <div class="news-image">
+                <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/12/1.jpg" alt="İKAF'25 paydaş kariyer merkezleri ilk toplantısı" />
+            </div>
+            <div class="news-content">
+                <div class="news-date">
+                    <i class="far fa-calendar-alt"></i>
+                    6 Aralık 2024
+                </div>
+                <h3 class="news-card-title">
+                    <a href="#">İKAF'25 paydaş kariyer merkezleri ilk toplantısı yapıldı</a>
+                </h3>
+                <p class="news-excerpt">
+                    Selçuk Üniversitesi ev sahipliğinde, Cumhurbaşkanlığı İnsan Kaynakları Ofisi Başkanlığının koordinasyonunda düzenlenecek olan İç Anadolu Kariyer Fuarı'na (İKAF'25) yönelik hazırlık çalışmaları...
+                </p>
+                <a href="#" class="news-read-more">
+                    Devamını Oku <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-image">
+                <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/1732009198386-1.jpg" alt="İKAF 2025 işbirliği görüşmeleri" />
+            </div>
+            <div class="news-content">
+                <div class="news-date">
+                    <i class="far fa-calendar-alt"></i>
+                    18 Kasım 2024
+                </div>
+                <h3 class="news-card-title">
+                    <a href="#">İKAF 2025 için kurumlar arası işbirliği görüşmeleri</a>
+                </h3>
+                <p class="news-excerpt">
+                    Cumhurbaşkanlığı İnsan Kaynakları Ofisi tarafından düzenlenen 2025 yılı İç Anadolu Kariyer Fuarına (İKAF25) Selçuk Üniversitesi ev sahipliği yapacak. 16 paydaş...
+                </p>
+                <a href="#" class="news-read-more">
+                    Devamını Oku <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-image">
+                <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/11.jpeg" alt="İKAF'25 ev sahipliği hazırlıkları" />
+            </div>
+            <div class="news-content">
+                <div class="news-date">
+                    <i class="far fa-calendar-alt"></i>
+                    18 Kasım 2024
+                </div>
+                <h3 class="news-card-title">
+                    <a href="#">Selçuk Üniversitesi, İKAF'25'in ev sahipliğine hazırlanıyor</a>
+                </h3>
+                <p class="news-excerpt">
+                    Selçuk Üniversitesi ev sahipliğinde, Cumhurbaşkanlığı İnsan Kaynakları Ofisi Başkanlığının koordinasyonunda düzenlenen İç Anadolu Kariyer Fuarı'na (İKAF'25) yönelik hazırlık toplantısı gerçekleştirildi...
+                </p>
+                <a href="#" class="news-read-more">
+                    Devamını Oku <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="rector-message">
+    <div class="rector-container">
+        <div class="rector-grid">
+            <div class="rector-image-wrapper">
+                <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/1731320741822.png"
+                     alt="Prof. Dr. Hüseyin YILMAZ"
+                     class="rector-image">
+            </div>
+            <div class="rector-content">
+                <div class="rector-pattern"></div>
+                <h2 class="rector-title">Geleceğimizi Birlikte Şekillendirelim</h2>
+                <div class="rector-text">
+                    <p>Cumhurbaşkanlığı İnsan Kaynakları Ofisi Başkanlığının 2019 yılından itibaren düzenlemekte olduğu ve "Yetenek Her Yerde" teması etrafında şekillenen Bölgesel Kariyer Fuarları, Türkiye'nin her bölgesinden üniversite öğrencileri ve mezunlarını önde gelen kamu ve özel sektör temsilcileriyle bir araya getiren kritik öneme sahip bir platform niteliğindedir.</p>
+
+                    <p>Selçuk Üniversitesi olarak 2025 yılında İç Anadolu Kariyer Fuarı'na (İKAF'25) ev sahipliği yapacak olmanın gurur ve heyecanını yaşamaktayız. 20-21 Şubat 2025 tarihlerinde Konya'da, Valiliğimiz öncülüğünde ve İç Anadolu Bölgesi'nden 16 kıymetli üniversitenin, farklı meslek odalarının ve paydaş kurumların katkılarıyla gerçekleştirilecek olan bu organizasyon, öğrencilerimizin ve mezunlarımızın kariyer yolculuklarında sağlam adımlar atmalarına destek olmayı amaçlamaktadır.</p>
+
+                    <p>Bu vesileyle bölgedeki tüm kurum ve kuruluşları, gençlerimizin geleceğine destek olmak üzere İKAF'25'e katkı sunmaya davet ediyorum. İnanıyorum ki geleceğimizin teminatı olan gençlerimiz, bu fuarda edinecekleri tecrübe ve bilgi birikimiyle Türkiye'nin güçlü ve donanımlı liderleri olarak ülkemizin kalkınmasına katkı sağlayacaklardır.</p>
+                </div>
+                <div class="rector-signature">
+                    Prof. Dr. Hüseyin YILMAZ
+                    <div class="rector-title-small">Selçuk Üniversitesi Rektörü</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Paydaş Üniversiteler Bölümü -->
+<!-- Paydaş Üniversiteler Bölümü -->
+<section class="partners-section">
+    <div class="partners-container">
+        <div class="partners-heading">
+            <h2 class="partners-title">Paydaş Üniversitelerimiz</h2>
+            <p class="partners-subtitle">İç Anadolu'nun Değerli Yükseköğretim Kurumları</p>
+        </div>
+        <div class="partners-wrapper">
+            <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/paydaslar2.png"
+                 alt="İKAF 2025 Paydaş Üniversiteleri"
+                 class="partners-image">
+        </div>
+    </div>
+</section>
+
+<!-- Rektörün Mesajı Butonu -->
+<div class="floating-rector" id="rectorButton">
+    <button class="rector-button" onclick="window.openRectorModal()">
+        <div class="rector-button-content">
+            <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/1731320741822.png"
+                 alt="Prof. Dr. Hüseyin YILMAZ"
+                 class="rector-button-image">
+            <span class="rector-button-text">Rektörün Mesajını Okuyun</span>
+        </div>
+    </button>
+    <span class="close-rector-btn" onclick="hideRectorButton()">&times;</span>
+</div>
+
+<!-- Rektör Modal -->
+<div id="rectorModal" class="rector-modal">
+    <div class="rector-modal-content">
+        <span class="close-modal" onclick="closeRectorModal()">&times;</span>
+        <div class="rector-modal-grid">
+            <div class="rector-modal-image">
+                <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/1731320741822.png"
+                     alt="Prof. Dr. Hüseyin YILMAZ">
+            </div>
+            <div class="rector-modal-text">
+                <h2 class="rector-modal-title">Geleceğimizi Birlikte Şekillendirelim</h2>
+                <div class="rector-modal-content-text">
+                    <p>Cumhurbaşkanlığı İnsan Kaynakları Ofisi Başkanlığının 2019 yılından itibaren düzenlemekte olduğu ve "Yetenek Her Yerde" teması etrafında şekillenen Bölgesel Kariyer Fuarları, Türkiye'nin her bölgesinden üniversite öğrencileri ve mezunlarını önde gelen kamu ve özel sektör temsilcileriyle bir araya getiren kritik öneme sahip bir platform niteliğindedir.</p>
+                    <p>Selçuk Üniversitesi olarak 2025 yılında İç Anadolu Kariyer Fuarı'na (İKAF'25) ev sahipliği yapacak olmanın gurur ve heyecanını yaşamaktayız. 20-21 Şubat 2025 tarihlerinde Konya'da, Valiliğimiz öncülüğünde ve İç Anadolu Bölgesi'nden 16 kıymetli üniversitenin, farklı meslek odalarının ve paydaş kurumların katkılarıyla gerçekleştirilecek olan bu organizasyon, öğrencilerimizin ve mezunlarımızın kariyer yolculuklarında sağlam adımlar atmalarına destek olmayı amaçlamaktadır.</p>
+                    <p>Bu vesileyle bölgedeki tüm kurum ve kuruluşları, gençlerimizin geleceğine destek olmak üzere İKAF'25'e katkı sunmaya davet ediyorum. İnanıyorum ki geleceğimizin teminatı olan gençlerimiz, bu fuarda edinecekleri tecrübe ve bilgi birikimiyle Türkiye'nin güçlü ve donanımlı liderleri olarak ülkemizin kalkınmasına katkı sağlayacaklardır.</p>
+                </div>
+                <div class="rector-modal-signature">
+                    Prof. Dr. Hüseyin YILMAZ
+                    <div class="rector-modal-title-small">Selçuk Üniversitesi Rektörü</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

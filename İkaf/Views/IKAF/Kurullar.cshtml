@@ -1,0 +1,346 @@
+﻿@{
+    ViewData["Title"] = "Kurullar";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/MenuCss/kurullar.css" />
+    <style>
+        .kurullar-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .kurul-bolumu {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .kurul-bolumu h1 {
+            font-size: 24pt;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .kurul-bolumu h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+
+        .kurul-uye {
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .kurul-uye:hover {
+            transform: translateX(5px);
+            background: #f1f3f5;
+        }
+
+        .alt-kurul {
+            margin: 30px 0;
+        }
+
+        .alt-kurul h2 {
+            font-size: 18pt;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .kurul-uye p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .kurul-uye strong {
+            color: var(--dark-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .kurul-uye a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .kurul-uye a:hover {
+            color: var(--secondary-color);
+        }
+
+        @@media (max-width: 991px) {
+            .kurullar-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+}
+<div class="kurullar-container">
+    <div class="kurul-bolumu danisma-kurulu">
+        <h1><strong>DANIŞMA KURULU</strong></h1>
+        <div class="kurul-uye">
+            <p>
+                Selçuk Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Hüseyin YILMAZ</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Abdullah Gül Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Cengiz YILMAZ</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Afyon Kocatepe Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Mehmet KARAKAŞ</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Afyonkarahisar Sağlık Bilimleri Üni. Rektörü<br>
+                <strong>Prof. Dr. Nurullah OKUMUŞ</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Aksaray Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Alpay ARIBAŞ</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Erciyes Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Fatih ALTUN</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Kapadokya Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Hasan Ali KARASAR</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Karamanoğlu Mehmetbey Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Mehmet GAVGALI</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Kayseri Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Kurtuluş KARAMUSTAFA</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Kırıkkale Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Ersan ASLAN</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Kırşehir Ahi Evran Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Mustafa Kasım KARAHOCAGİL</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Konya Gıda ve Tarım Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Erol TURAN</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Konya Teknik Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Osman Nuri ÇELİK</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                KTO Karatay Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Fevzi Rifat ORTAÇ</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Necmettin Erbakan Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Cem ZORLU</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Nevşehir Hacı Bektaş Veli Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Semih AKTEKİN</strong>
+            </p>
+        </div>
+        <div class="kurul-uye">
+            <p>
+                Nuh Naci Yazgan Üniversitesi Rektörü<br>
+                <strong>Prof. Dr. Ahmet Fazıl ÖZSOYLU</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="kurul-bolumu duzenleme-kurulu">
+        <h1><strong>DÜZENLEME KURULU</strong></h1>
+
+        <div class="alt-kurul">
+            <h2>İKAF SORUMLUSU</h2>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Prof. Dr. Haldun SOYDAL</strong><br>
+                    Selçuk Üniversitesi Rektör Yardımcısı<br>
+                    <a href="mailto:hsoydal@selcuk.edu.tr">hsoydal@selcuk.edu.tr</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="alt-kurul">
+            <h2>İKAF KOORDİNASYON</h2>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Dr. Öğr. Üyesi Kamil AHAT</strong><br>
+                    Selçuk Üniversitesi Kariyer Merkezi Müdürü<br>
+                    <a href="mailto:kamilahat@selcuk.edu.tr">kamilahat@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Doç. Dr. Hacer AKER</strong><br>
+                    Selçuk Üniversitesi Kariyer Merkezi Müdür Yrd.<br>
+                    <a href="mailto:haceraker@selcuk.edu.tr">haceraker@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Dr. Fatih İbrahim KURŞUNMADEN</strong><br>
+                    Selçuk Üniversitesi Kariyer Merkezi Müdür Yrd.<br>
+                    <a href="mailto:kursunmaden@selcuk.edu.tr">kursunmaden@selcuk.edu.tr</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="alt-kurul">
+            <h2>İKAF KURUMSAL İLETİŞİM</h2>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Doç. Dr. Selman Selim AKYÜZ</strong><br>
+                    Selçuk Üniversitesi Kurumsal İletişim Koordinatörü<br>
+                    <a href="mailto:selmanakyuz@selcuk.edu.tr">selmanakyuz@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Zeynep GÖKTAŞ</strong><br>
+                    Selçuk Üniversitesi Kurumsal İletişim Koordinatör Yrd.<br>
+                    <a href="mailto:zcogay@selcuk.edu.tr">zcogay@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Halil İbrahim TONGUR</strong><br>
+                    Selçuk Üniversitesi Kurumsal İletişim Koordinatörlüğü<br>
+                    Sosyal Medya Sorumlusu<br>
+                    <a href="mailto:halil.tongur@selcuk.edu.tr">halil.tongur@selcuk.edu.tr</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="alt-kurul">
+            <h2>Görsel Tasarım Ekibi</h2>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Öğr. Gör. Tarık DOĞAN</strong><br>
+                    Selçuk Üniversitesi Görsel Tasarım Sorumlusu<br>
+                    <a href="mailto:tdogan@selcuk.edu.tr">tdogan@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Mücahit İsmail ÖZ</strong><br>
+                    Grafiker<br>
+                    <a href="mailto:mucahit.oz@selcuk.edu.tr">mucahit.oz@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Tuğçe BAĞCI</strong><br>
+                    Grafiker<br>
+                    <a href="mailto:tugce.bagci@selcuk.edu.tr">tugce.bagci@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Azra IŞIK</strong><br>
+                    Grafiker<br>
+                    <a href="mailto:azra.isik@selcuk.edu.tr">azra.isik@selcuk.edu.tr</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="alt-kurul">
+            <h2>Editör Ekibi</h2>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Öğr. Gör. Adem SERİN</strong><br>
+                    Haber Editörü<br>
+                    <a href="mailto:adem.serin@selcuk.edu.tr">adem.serin@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Memduh BİLGİLİ</strong><br>
+                    Haber Editörü<br>
+                    <a href="mailto:memduhbilgili@selcuk.edu.tr">memduhbilgili@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Melek SARITAŞ</strong><br>
+                    Haber Editörü<br>
+                    <a href="mailto:melek.saritas@selcuk.edu.tr">melek.saritas@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Sekine ECE</strong><br>
+                    Redaktör<br>
+                    <a href="mailto:sekine.ece@selcuk.edu.tr">sekine.ece@selcuk.edu.tr</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="alt-kurul">
+            <h2>Fotoğraf Ekibi</h2>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Ahmet YALÇIN</strong><br>
+                    Fotoğrafçı<br>
+                    <a href="mailto:ahmetyalcin@selcuk.edu.tr">ahmetyalcin@selcuk.edu.tr</a>
+                </p>
+            </div>
+            <div class="kurul-uye">
+                <p>
+                    <strong>Rifat ORAL</strong><br>
+                    Fotoğrafçı<br>
+                    <a href="mailto:rifatoral@selcuk.edu.tr">rifatoral@selcuk.edu.tr</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

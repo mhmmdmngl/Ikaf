@@ -1,0 +1,139 @@
+﻿/* Rektörün Mesajı Bölümü */
+.rector-message {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(35, 222, 224, 0.03) 0%, rgba(254, 203, 21, 0.03) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.rector-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.rector-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.rector-image-wrapper {
+    position: relative;
+}
+
+.rector-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .rector-image:hover {
+        transform: translateY(-10px);
+    }
+
+.rector-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.rector-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/slideralti3.png');
+    background-size: contain;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.rector-title {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+    .rector-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        border-radius: 2px;
+    }
+
+.rector-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.rector-signature {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.rector-title-small {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .rector-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rector-image-wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .rector-message {
+        padding: 40px 0;
+    }
+
+    .rector-content {
+        padding: 25px;
+    }
+
+    .rector-title {
+        font-size: 1.8rem;
+    }
+
+    .rector-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .rector-title {
+        font-size: 1.5rem;
+    }
+
+    .rector-signature {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - İKAF | İç Anadolu Kariyer Fuarı</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
+    <link href="~/css/quickaccess.css" rel="stylesheet" />
+    <link href="~/css/countdown.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/css/news.css" rel="stylesheet" />
+    <link href="~/css/rector-message.css" rel="stylesheet" />
+    <link href="~/css/partners.css" rel="stylesheet" />
+    <link href="~/css/rector-modal.css" rel="stylesheet" />
+    <link href="~/css/menucss/hakkimizda.css" rel="stylesheet" />
+    <link href="~/css/footer.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row align-items-center nav-wrapper">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="logo-container">
+                        <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/logoikav2.png"
+                             alt="İKAF Logo"
+                             class="logo-img" />
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-6">
+                    <nav id="site-navigation" class="main-navigation">
+                        <div class="menu-toggle">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <div class="menu-container">
+                            <ul class="nav-menu">
+                                <li class="menu-item has-submenu">
+                                    <a href="#"><i class="fas fa-calendar-alt menu-icon"></i>İKAF'25</a>
+                                    <ul class="submenu">
+                                        <li><a href=@Url.Action("Hakkimizda", "Ikaf")><i class="fas fa-info-circle menu-icon"></i>Hakkımızda</a></li>
+                                        <li><a href=@Url.Action("Kurullar", "Ikaf")><i class="fas fa-users menu-icon"></i>İKAF 2025 Kurullar</a></li>
+                                        <li><a href=@Url.Action("PaydasUniversiteler", "Ikaf")><i class="fas fa-university menu-icon"></i>Paydaş Üniversiteler</a></li>
+                                        <li><a href=@Url.Action("Konaklama", "Ikaf")><i class="fas fa-bed menu-icon"></i>Konaklama</a></li>
+                                        <li><a href="#"><i class="fas fa-book-open menu-icon"></i>Tanıtım Kataloğu</a></li>
+                                        <li><a href="#"><i class="fas fa-briefcase menu-icon"></i>Kariyer Merkezleri</a></li>
+                                        <li><a href="#"><i class="fas fa-film menu-icon"></i>Tanıtım Filmi</a></li>
+                                        <li><a href="#"><i class="fas fa-newspaper menu-icon"></i>Basın Kiti</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#"><i class="fas fa-newspaper menu-icon"></i>Haberler</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#"><i class="fas fa-map-marked-alt menu-icon"></i>Fuar Alanı</a>
+                                </li>
+                                <li class="menu-item has-submenu">
+                                    <a href="#"><i class="fas fa-calendar-check menu-icon"></i>Etkinlikler</a>
+                                    <ul class="submenu">
+                                        <li><a href="#"><i class="fas fa-list menu-icon"></i>Etkinlik Türleri</a></li>
+                                        <li><a href="#"><i class="far fa-calendar-alt menu-icon"></i>Etkinlik Takvimi</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#"><i class="fas fa-user-plus menu-icon"></i>Nasıl Kayıt Olurum?</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#"><i class="fas fa-handshake menu-icon"></i>Sponsorlar</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#"><i class="fas fa-envelope menu-icon"></i>İletişim</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Footer Bölümü -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Logo Bölümü -->
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/ikafbeyaz.png" alt="İKAF Logo">
+                        </div>
+                    </div>
+
+                    <!-- İletişim Bilgileri -->
+                    <div class="footer-widget">
+                        <h3 class="widget-title">İletişim</h3>
+                        <div class="contact-info">
+                            <p class="contact-heading">Selçuk Üniversitesi İKAF İletişim Merkezi</p>
+                            <p class="contact-address">Selçuk Üniversitesi Rektörlüğü Alaeddin Keykubat Yerleşkesi Akademi Mah. Yeni İstanbul Cad. No. 369 Posta Kodu: 42130 Selçuklu/Konya/TÜRKİYE</p>
+                            <p class="contact-phone">0332 223 31 29</p>
+                            <p class="contact-email">selcukkariyer@selcuk.edu.tr</p>
+                        </div>
+                    </div>
+
+                    <!-- Sosyal Medya -->
+                    <div class="footer-widget">
+                        <h3 class="widget-title">Bizi Takip Edin</h3>
+                        <div class="social-links">
+                            <a href="https://facebook.com/ikaf.2025" target="_blank" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/ikaf2025" target="_blank" class="social-link">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/ikaf.2025" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alt Footer -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">İKAF 2025 | Copyright © Tüm Hakkı Saklıdır. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/countdown.js"></script>
+    <script src="~/js/rector-modal.js"></script>
+    <script src="~/js/menucss/hakkimizda.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

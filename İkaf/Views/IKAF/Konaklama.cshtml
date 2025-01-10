@@ -1,0 +1,295 @@
+﻿@section Styles {
+    <style>
+        .accommodation-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .accommodation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .accommodation-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+            .accommodation-table table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .accommodation-table th {
+                background: var(--primary-color);
+                color: white;
+                padding: 15px;
+                text-align: left;
+            }
+
+            .accommodation-table td {
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+                transition: background 0.3s ease;
+            }
+
+            .accommodation-table tr:hover td {
+                background: #f8f9fa;
+            }
+
+            .accommodation-table tr:last-child td {
+                border-bottom: none;
+            }
+
+        .map-btn {
+            padding: 5px 10px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+            .map-btn:hover {
+                transform: translateY(-2px);
+            }
+
+        .table-phone {
+            white-space: nowrap;
+        }
+
+        @@media (max-width: 991px) {
+            .accommodation-grid
+
+        {
+            grid-template-columns: 1fr;
+        }
+
+        }
+    </style>
+}
+
+<div class="accommodation-container">
+    <div class="accommodation-grid">
+        <!-- Oteller -->
+        <div class="accommodation-table">
+            <h2 class="section-title">Oteller</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Otel İsmi</th>
+                        <th>Telefon</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bayır Diamond Hotel & Convention Center</td>
+                        <td class="table-phone">0 332 224 12 00</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Bayır+Diamond+Hotel+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dedeman Konya Hotel & Convention Center</td>
+                        <td class="table-phone">0 332 221 66 00</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Dedeman+Konya+Hotel')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ramada Plaza By Wyndham Konya</td>
+                        <td class="table-phone">0 332 248 40 00</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Ramada+Plaza+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hilton Garden Inn Konya</td>
+                        <td class="table-phone">0 332 221 60 00</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Hilton+Garden+Inn+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Novotel Konya</td>
+                        <td class="table-phone">0 332 223 42 00</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Novotel+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Grand Hotel Konya</td>
+                        <td class="table-phone">0 332 221 50 00</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Grand+Hotel+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Özkaymak Konya Hotel</td>
+                        <td class="table-phone">0 332 237 87 20</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Özkaymak+Konya+Hotel')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Misafirhaneler -->
+        <div class="accommodation-table">
+            <h2 class="section-title">Misafirhaneler</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Misafirhane İsmi</th>
+                        <th>Telefon</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DSİ Misafirhanesi</td>
+                        <td class="table-phone">0 332 322 01 91</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=DSİ+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TEİAŞ Misafirhanesi</td>
+                        <td class="table-phone">0 332 265 09 70</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=TEİAŞ+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TCDD Misafirhanesi</td>
+                        <td class="table-phone">0 332 320 11 38</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=TCDD+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sağlık Misafirhanesi</td>
+                        <td class="table-phone">0 332 237 98 50</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Sağlık+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MTA Misafirhanesi</td>
+                        <td class="table-phone">0 332 255 03 07</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=MTA+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Karayolları Misafirhanesi</td>
+                        <td class="table-phone">0 332 235 44 01</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Karayolları+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Medaş Misafirhanesi</td>
+                        <td class="table-phone">0 332 255 00 60</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Medaş+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tarım Kredi Misafirhanesi</td>
+                        <td class="table-phone">0 332 322 47 46</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Tarım+Kredi+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Orman Bölge Müdürlüğü Misafirhanesi</td>
+                        <td class="table-phone">0 332 353 69 02</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Orman+Bölge+Müdürlüğü+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Selçuk Üniversitesi Konuk Evi</td>
+                        <td class="table-phone">0 332 223 3317</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Selçuk+Üniversitesi+Konuk+Evi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fidanlık Misafirhanesi</td>
+                        <td class="table-phone">0 332 355 14 80</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Fidanlık+Misafirhanesi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Polis Evi</td>
+                        <td class="table-phone">0 332 251 09 25</td>
+                        <td>
+                            <button class="map-btn" onclick="window.open('https://maps.google.com/search?q=Polis+Evi+Konya')">
+                                <i class="fas fa-map-marker-alt"></i> Haritada Gör
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

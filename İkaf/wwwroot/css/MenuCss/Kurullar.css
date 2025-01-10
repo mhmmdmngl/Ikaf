@@ -1,0 +1,71 @@
+﻿.kurullar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.kurul-bolumu {
+    margin-bottom: 50px;
+}
+
+    .kurul-bolumu h1 {
+        font-size: 24pt;
+        margin-bottom: 30px;
+        color: var(--dark-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 10px;
+    }
+
+.alt-kurul {
+    margin-bottom: 40px;
+}
+
+    .alt-kurul h2 {
+        font-size: 18pt;
+        color: var(--dark-color);
+        margin-bottom: 20px;
+    }
+
+.kurul-uye {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+    .kurul-uye p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .kurul-uye strong {
+        display: block;
+        color: var(--dark-color);
+        margin-bottom: 5px;
+    }
+
+    .kurul-uye a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        .kurul-uye a:hover {
+            color: var(--secondary-color);
+        }
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .kurullar-container {
+        padding: 20px;
+    }
+
+    .kurul-bolumu h1 {
+        font-size: 20pt;
+    }
+
+    .alt-kurul h2 {
+        font-size: 16pt;
+    }
+}

@@ -1,0 +1,88 @@
+﻿/* Paydaş Üniversiteler Bölümü */
+.partners-section {
+    padding: 60px 0;
+    background: white;
+    overflow: hidden;
+}
+
+.partners-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.partners-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.partners-title {
+    font-size: 2.2rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+    .partners-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        border-radius: 2px;
+    }
+
+.partners-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.partners-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .partners-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 40px 0;
+    }
+
+    .partners-title {
+        font-size: 1.8rem;
+    }
+
+    .partners-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .partners-container {
+        padding: 0 10px;
+    }
+
+    .partners-title {
+        font-size: 1.5rem;
+    }
+}
+

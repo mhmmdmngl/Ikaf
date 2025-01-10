@@ -1,0 +1,221 @@
+﻿@section Styles {
+    <style>
+        .universities-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            .hero-title h1 {
+                font-size: 2.5rem;
+                color: var(--dark-color);
+                margin-bottom: 15px;
+            }
+
+            .hero-title p {
+                font-size: 1.1rem;
+                color: #666;
+            }
+
+        .universities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .university-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .university-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .logo-container {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .logo-container img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+        .university-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @@media (max-width: 1200px) {
+            .universities-grid
+
+        {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        }
+
+        @@media (max-width: 991px) {
+            .universities-grid
+
+        {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        }
+
+        @@media (max-width: 576px) {
+            .universities-grid
+
+        {
+            grid-template-columns: 1fr;
+        }
+
+        }
+    </style>
+}
+
+<div class="universities-container">
+    <div class="hero-title">
+        <h1>Paydaş Üniversitelerimiz</h1>
+        <p>İç Anadolu'nun Değerli Yükseköğretim Kurumları</p>
+    </div>
+
+    <div class="universities-grid">
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/agu-logo.png" alt="Abdullah Gül Üniversitesi">
+            </div>
+            <div class="university-name">Abdullah Gül Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/afyon-kocatepe-logo.png" alt="Afyon Kocatepe Üniversitesi">
+            </div>
+            <div class="university-name">Afyon Kocatepe Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Afyonkarahisar_Sağlık_Bilimleri_Üniversitesi_logo.png" alt="Afyonkarahisar Sağlık Bilimleri Üniversitesi">
+            </div>
+            <div class="university-name">Afyonkarahisar Sağlık Bilimleri Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/aksaraylogo.png" alt="Aksaray Üniversitesi">
+            </div>
+            <div class="university-name">Aksaray Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Erciyes_University_logo.svg.png" alt="Erciyes Üniversitesi">
+            </div>
+            <div class="university-name">Erciyes Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/kapadokya-universitesi_logo.png" alt="Kapadokya Üniversitesi">
+            </div>
+            <div class="university-name">Kapadokya Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Karaman-mehmetbey.png" alt="Karamanoğlu Mehmetbey Üniversitesi">
+            </div>
+            <div class="university-name">Karamanoğlu Mehmetbey Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Kayseri_Üniversitesi_logo.png" alt="Kayseri Üniversitesi">
+            </div>
+            <div class="university-name">Kayseri Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Kırıkkale.png" alt="Kırıkkale Üniversitesi">
+            </div>
+            <div class="university-name">Kırıkkale Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Kırşehir-Ahi-Ervan-Logo.png" alt="Kırşehir Ahi Evran Üniversitesi">
+            </div>
+            <div class="university-name">Kırşehir Ahi Evran Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/konya-gida-ve-tarim-universitesi.png" alt="Konya Gıda ve Tarım Üniversitesi">
+            </div>
+            <div class="university-name">Konya Gıda ve Tarım Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Konya_Teknik_Üniversitesi_logo.svg.png" alt="Konya Teknik Üniversitesi">
+            </div>
+            <div class="university-name">Konya Teknik Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/KtoLOGO.png" alt="KTO Karatay Üniversitesi">
+            </div>
+            <div class="university-name">KTO Karatay Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Necmettin_Erbakan_Üniversitesi_logosu.png" alt="Necmettin Erbakan Üniversitesi">
+            </div>
+            <div class="university-name">Necmettin Erbakan Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/Nevsehir_uni_logo.png" alt="Nevşehir Hacı Bektaş Veli Üniversitesi">
+            </div>
+            <div class="university-name">Nevşehir Hacı Bektaş Veli Üniversitesi</div>
+        </div>
+
+        <div class="university-card">
+            <div class="logo-container">
+                <img src="~/img/logo/nuh-naci-yazgan.png" alt="Nuh Naci Yazgan Üniversitesi">
+            </div>
+            <div class="university-name">Nuh Naci Yazgan Üniversitesi</div>
+        </div>
+    </div>
+</div>

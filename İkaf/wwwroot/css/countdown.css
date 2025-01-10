@@ -1,0 +1,258 @@
+﻿/* Countdown Section */
+.countdown-section {
+    background: linear-gradient(135deg, rgba(35, 222, 224, 0.05) 0%, rgba(254, 203, 21, 0.05) 100%);
+    padding: 40px 0;
+    margin: 30px 0;
+    border-radius: 15px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    gap: 40px;
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.countdown-headline {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+    .countdown-headline:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: var(--primary-color);
+        border-radius: 2px;
+    }
+
+.countdown-blocks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.countdown-block {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 100px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .countdown-block:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--primary-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .countdown-block:hover:before {
+        transform: scaleX(1);
+    }
+
+    .countdown-block:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+.countdown-digit {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Social Media Section */
+.social-media-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.social-media-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+}
+
+    .social-media-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        background: var(--secondary-color);
+        border-radius: 2px;
+    }
+
+.social-media-subtitle {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+    .social-icon-link:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    .social-icon-link i {
+        font-size: 24px;
+        position: relative;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+
+.social-icon-facebook i {
+    color: #0866FF;
+}
+
+.social-icon-twitter i {
+    color: #000;
+}
+
+.social-icon-instagram i {
+    color: #e4405f;
+}
+
+.social-icon-link:hover {
+    transform: translateY(-5px) rotate(5deg);
+}
+
+    .social-icon-link:hover:before {
+        opacity: 1;
+    }
+
+    .social-icon-link:hover i {
+        color: white;
+        transform: scale(1.1);
+    }
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .countdown-container {
+        flex-direction: column;
+    }
+
+    .social-media-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown-blocks {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .countdown-block {
+        min-width: 90px;
+        padding: 15px;
+    }
+
+    .countdown-digit {
+        font-size: 2rem;
+    }
+
+    .social-media-icons {
+        gap: 15px;
+    }
+
+    .social-icon-link {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-headline {
+        font-size: 1.5rem;
+    }
+
+    .countdown-block {
+        min-width: 70px;
+        padding: 10px;
+    }
+
+    .countdown-digit {
+        font-size: 1.8rem;
+    }
+
+    .social-media-title {
+        font-size: 1.2rem;
+    }
+}
