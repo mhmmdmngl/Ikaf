@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Ana Sayfa";
 }
-<section class="quick-buttons-section">
+@* <section class="quick-buttons-section">
     <div class="quick-buttons-container">
         <div class="quick-buttons-row">
             <div class="quick-button-wrapper">
@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> *@
 <!-- Slider Bölümü -->
 <div class="slider-container">
     <div class="swiper main-slider">
@@ -35,11 +35,7 @@
                          alt="İKAF Slider 1"
                          class="slide-image" />
                     <div class="slide-overlay"></div>
-                    <div class="slide-text">
-                        <h2>İKAF'25</h2>
-                        <p>Kariyerinize Yön Verin</p>
-                        <a href="#" class="btn btn-register">Hemen Kayıt Ol</a>
-                    </div>
+                    
                 </div>
             </div>
             <div class="swiper-slide">
@@ -48,16 +44,12 @@
                          alt="İKAF Slider 2"
                          class="slide-image" />
                     <div class="slide-overlay"></div>
-                    <div class="slide-text">
-                        <h2>İKAF'25</h2>
-                        <p>Kariyerinize Yön Verin</p>
-                        <a href="#" class="btn btn-register">Hemen Kayıt Ol</a>
-                    </div>
+                    
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-content">
-                    <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/slider2a.png"
+                    <img src="~/img/yetenek-kapisi.png"
                          alt="İKAF Slider 3"
                          class="slide-image" />
                     <div class="slide-overlay"></div>
@@ -174,7 +166,7 @@
 </section>
 
 <!-- Haberler Bölümü -->
-<section class="news-section">
+@* <section class="news-section">
     <div class="news-header">
         <h2 class="news-title">Son Gelişmeler</h2>
         <p class="news-subtitle">İKAF'25 ile ilgili en güncel haberler ve duyurular</p>
@@ -244,8 +236,8 @@
         </article>
     </div>
 </section>
-
-<section class="rector-message">
+ *@
+@* <section class="rector-message">
     <div class="rector-container">
         <div class="rector-grid">
             <div class="rector-image-wrapper">
@@ -270,10 +262,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> *@
 <!-- Paydaş Üniversiteler Bölümü -->
 <!-- Paydaş Üniversiteler Bölümü -->
-<section class="partners-section">
+@* <section class="partners-section">
     <div class="partners-container">
         <div class="partners-heading">
             <h2 class="partners-title">Paydaş Üniversitelerimiz</h2>
@@ -286,7 +278,7 @@
         </div>
     </div>
 </section>
-
+ *@
 <!-- Rektörün Mesajı Butonu -->
 <div class="floating-rector" id="rectorButton">
     <button class="rector-button" onclick="window.openRectorModal()">
@@ -294,7 +286,7 @@
             <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/1731320741822.png"
                  alt="Prof. Dr. Hüseyin YILMAZ"
                  class="rector-button-image">
-            <span class="rector-button-text">Rektörün Mesajını Okuyun</span>
+            <span class="rector-button-text">Rektörümüzden</span>
         </div>
     </button>
     <span class="close-rector-btn" onclick="hideRectorButton()">&times;</span>
