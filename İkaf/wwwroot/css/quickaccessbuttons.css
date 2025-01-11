@@ -1,8 +1,18 @@
-﻿.quick-buttons-section {
+﻿/* Ensure the header and dropdowns stay on top */
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+.main-navigation .submenu {
+    z-index: 1001;
+}
+
+.quick-buttons-section {
     width: 100%;
     padding: 20px 0;
     position: relative;
-    z-index: 1000;
+    z-index: 900;
     transition: all 0.3s ease;
 }
 
