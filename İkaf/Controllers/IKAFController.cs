@@ -27,5 +27,10 @@ namespace İkaf.Controllers
         {
             return View();
         }
+
+        public IActionResult Katalog()
+        {
+            return View();
+        }
     }
 }

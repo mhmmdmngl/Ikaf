@@ -30,16 +30,30 @@ header {
     padding: 10px 0;
 }
 
+. /* Logo Responsive Adjustments */
 .logo-container {
     padding: 10px;
 }
 
 .logo-img {
-    max-width: 250px;
+    max-width: 225px;
     height: auto;
+    transition: max-width 0.3s ease;
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+}
+
+
 /* Navigation Styles */
+/* Updated Navigation Styles */
 .main-navigation {
     display: flex;
     justify-content: flex-end;
@@ -68,11 +82,6 @@ header {
         transition: var(--transition);
         white-space: nowrap;
     }
-
-        .menu-item a:hover {
-            color: var(--primary-color);
-            background-color: rgba(35, 222, 224, 0.1);
-        }
 
 /* Icon Styles */
 .menu-icon {
@@ -299,35 +308,32 @@ header {
 }
 
 @media (max-width: 768px) {
-
-    /* Mobile Navigation */
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 10px;
-        float: right;
+    .logo-img {
+        max-width: 150px;
     }
 
-        .menu-toggle i {
-            font-size: 24px;
-            color: var(--dark-color);
-        }
+    .menu-toggle {
+        display: block;
+        position: relative;
+    }
 
     .menu-container {
         display: none;
-        width: 100%;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
-        background: white;
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 80px 20px 20px;
+        overflow-y: auto;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
     }
 
         .menu-container.active {
             display: block;
+            transform: translateX(0);
         }
 
     .nav-menu {
@@ -336,56 +342,59 @@ header {
     }
 
     .menu-item {
-        margin: 5px 0;
-        width: 100%;
-        border-bottom: 1px solid #eee;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-
         .menu-item a {
-            padding: 12px;
+            padding: 15px;
+            justify-content: space-between;
         }
 
+    /* Mobile Submenu Styles */
     .submenu {
         position: static;
         width: 100%;
         display: none;
         box-shadow: none;
-        padding: 0 0 0 20px;
-        background: var(--light-color);
-    }
-
-    .has-submenu.active .submenu {
-        display: block;
+        background: transparent;
+        padding: 0;
+        margin: 0;
     }
 
     .has-submenu > a:after {
         content: '\f054';
-        margin-left: auto;
+        transition: transform 0.3s ease;
     }
 
-    /* Mobile Slider */
-    .main-slider {
-        height: 350px;
+    .has-submenu.active > a:after {
+        transform: rotate(90deg);
     }
 
-    .slide-text h2 {
-        font-size: 2.5rem;
+    .has-submenu.active .submenu {
+        display: block;
+        animation: slideDown 0.3s ease-in-out;
     }
 
-    .slide-text p {
-        font-size: 1.2rem;
+    .submenu li a {
+        padding: 12px 15px 12px 35px;
+        font-size: 0.95em;
     }
 
-    .btn-register {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+    /* Remove desktop hover effects on mobile */
+    .menu-item a:after {
+        display: none;
+    }
+
+    .menu-item a:hover {
+        background: rgba(35, 222, 224, 0.1);
+    }
+
+    .menu-icon {
+        margin-right: 10px;
+        font-size: 1.1em;
     }
 }
-
 @media (max-width: 576px) {
     .main-slider {
         height: 300px;
@@ -398,5 +407,29 @@ header {
     .slide-text p {
         font-size: 1rem;
         margin-bottom: 1rem;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 576px) {
+    .logo-img {
+        max-width: 120px;
+    }
+
+    .menu-container {
+        padding: 70px 15px 15px;
     }
 }

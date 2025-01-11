@@ -1,0 +1,222 @@
+﻿@{
+    ViewData["Title"] = "İKAF 2025 Katalogları";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/menucss/katalog.css" />
+}
+
+<div class="catalogs-container">
+    <!-- Tanıtım Kataloğu -->
+    <div class="catalog-section">
+        <div class="catalog-header">
+            <h2 class="catalog-title">Tanıtım Kataloğu</h2>
+        </div>
+        <div class="catalog-container">
+            <div class="catalog-controls">
+                <button id="prevPage1" class="control-btn">
+                    <i class="fas fa-chevron-left"></i> Önceki
+                </button>
+                <span id="pageInfo1" class="page-info">
+                    Sayfa <span id="pageNum1">0</span> / <span id="pageCount1">0</span>
+                </span>
+                <button id="nextPage1" class="control-btn">
+                    Sonraki <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="zoom-controls">
+                    <button id="zoomIn1" class="control-btn">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button id="zoomOut1" class="control-btn">
+                        <i class="fas fa-search-minus"></i>
+                    </button>
+                </div>
+                <button id="download1" class="control-btn">
+                    <i class="fas fa-download"></i> İndir
+                </button>
+            </div>
+            <div class="catalog-viewer">
+                <canvas id="pdfViewer1"></canvas>
+                <div id="loading1" class="loading">
+                    <div class="spinner"></div>
+                    <span>Yükleniyor...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Katılımcı İşveren Kılavuzu -->
+    <div class="catalog-section">
+        <div class="catalog-header">
+            <h2 class="catalog-title">Katılımcı İşveren Kılavuzu</h2>
+        </div>
+        <div class="catalog-container">
+            <div class="catalog-controls">
+                <button id="prevPage2" class="control-btn">
+                    <i class="fas fa-chevron-left"></i> Önceki
+                </button>
+                <span id="pageInfo2" class="page-info">
+                    Sayfa <span id="pageNum2">0</span> / <span id="pageCount2">0</span>
+                </span>
+                <button id="nextPage2" class="control-btn">
+                    Sonraki <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="zoom-controls">
+                    <button id="zoomIn2" class="control-btn">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button id="zoomOut2" class="control-btn">
+                        <i class="fas fa-search-minus"></i>
+                    </button>
+                </div>
+                <button id="download2" class="control-btn">
+                    <i class="fas fa-download"></i> İndir
+                </button>
+            </div>
+            <div class="catalog-viewer">
+                <canvas id="pdfViewer2"></canvas>
+                <div id="loading2" class="loading">
+                    <div class="spinner"></div>
+                    <span>Yükleniyor...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        // PDF.js worker için CDN yolu
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        // PDF Görüntüleyici sınıfı
+        class PDFViewer {
+            constructor(config) {
+                this.canvasId = config.canvasId;
+                this.loadingId = config.loadingId;
+                this.pageNumId = config.pageNumId;
+                this.pageCountId = config.pageCountId;
+                this.prevId = config.prevId;
+                this.nextId = config.nextId;
+                this.zoomInId = config.zoomInId;
+                this.zoomOutId = config.zoomOutId;
+                this.downloadId = config.downloadId;
+                this.pdfUrl = config.pdfUrl;
+
+                this.canvas = document.getElementById(this.canvasId);
+                this.loading = document.getElementById(this.loadingId);
+                this.ctx = this.canvas.getContext('2d');
+                this.pdfDoc = null;
+                this.pageNum = 1;
+                this.scale = 1.5;
+                this.isLoading = false;
+
+                this.init();
+            }
+
+            async init() {
+                try {
+                    this.loading.style.display = 'flex';
+                    const loadingTask = pdfjsLib.getDocument(this.pdfUrl);
+                    this.pdfDoc = await loadingTask.promise;
+                    document.getElementById(this.pageCountId).textContent = this.pdfDoc.numPages;
+                    this.renderPage(this.pageNum);
+                    this.setupEventListeners();
+                } catch (error) {
+                    console.error('PDF yüklenirken hata:', error);
+                    this.loading.innerHTML = 'PDF yüklenirken bir hata oluştu.';
+                }
+            }
+
+            async renderPage(num) {
+                if (this.isLoading) return;
+                this.isLoading = true;
+                this.loading.style.display = 'flex';
+
+                try {
+                    const page = await this.pdfDoc.getPage(num);
+                    const viewport = page.getViewport({ scale: this.scale });
+
+                    this.canvas.height = viewport.height;
+                    this.canvas.width = viewport.width;
+
+                    const renderContext = {
+                        canvasContext: this.ctx,
+                        viewport: viewport
+                    };
+
+                    await page.render(renderContext).promise;
+                    document.getElementById(this.pageNumId).textContent = num;
+                } catch (error) {
+                    console.error('Sayfa render hatası:', error);
+                } finally {
+                    this.isLoading = false;
+                    this.loading.style.display = 'none';
+                }
+            }
+
+            setupEventListeners() {
+                document.getElementById(this.prevId).addEventListener('click', () => {
+                    if (this.pageNum <= 1) return;
+                    this.pageNum--;
+                    this.renderPage(this.pageNum);
+                });
+
+                document.getElementById(this.nextId).addEventListener('click', () => {
+                    if (this.pageNum >= this.pdfDoc.numPages) return;
+                    this.pageNum++;
+                    this.renderPage(this.pageNum);
+                });
+
+                document.getElementById(this.zoomInId).addEventListener('click', () => {
+                    this.scale *= 1.2;
+                    this.renderPage(this.pageNum);
+                });
+
+                document.getElementById(this.zoomOutId).addEventListener('click', () => {
+                    this.scale *= 0.8;
+                    this.renderPage(this.pageNum);
+                });
+
+                document.getElementById(this.downloadId).addEventListener('click', () => {
+                    const link = document.createElement('a');
+                    link.href = this.pdfUrl;
+                    link.download = this.pdfUrl.split('/').pop();
+                    link.click();
+                });
+            }
+        }
+
+        // PDF görüntüleyicileri başlat
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tanıtım Kataloğu
+            new PDFViewer({
+                canvasId: 'pdfViewer1',
+                loadingId: 'loading1',
+                pageNumId: 'pageNum1',
+                pageCountId: 'pageCount1',
+                prevId: 'prevPage1',
+                nextId: 'nextPage1',
+                zoomInId: 'zoomIn1',
+                zoomOutId: 'zoomOut1',
+                downloadId: 'download1',
+                pdfUrl: 'https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/11/ikaf_2025_son-1.pdf'
+            });
+
+            // Katılımcı İşveren Kılavuzu
+            new PDFViewer({
+                canvasId: 'pdfViewer2',
+                loadingId: 'loading2',
+                pageNumId: 'pageNum2',
+                pageCountId: 'pageCount2',
+                prevId: 'prevPage2',
+                nextId: 'nextPage2',
+                zoomInId: 'zoomIn2',
+                zoomOutId: 'zoomOut2',
+                downloadId: 'download2',
+                pdfUrl: 'https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/12/İKAF_Katilimci-Bilgilendirme-Kilavuzu_1612.pdf'
+            });
+        });
+    </script>
+}
