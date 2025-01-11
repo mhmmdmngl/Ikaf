@@ -44,26 +44,43 @@
 .quick-button-wrapper {
     flex: 0 1 auto; /* Auto width yerine sabit genişlik kaldırdım */
 }
-
 .quick-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 20px; /* Daha ince görünüm */
-    background: white;
-    color: var(--accent-color);
+    padding: 4px 16px;
+    background: linear-gradient(45deg, var(--primary-color), #20e5c9, #fcdd4e, var(--secondary-color));
+    background-size: 300% 300%;
+    color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 0.85em;
     letter-spacing: 0.3px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(108, 99, 255, 0.1);
-    border: 1px solid rgba(108, 99, 255, 0.1);
+    box-shadow: 0 1px 4px rgba(254, 203, 21, 0.15);
+    border: none;
+    height: 28px;
+    animation: shimmer 3s linear infinite;
 }
 
-    .quick-button:hover {
-        transform: translateY(-2px);
-        background: var(--accent-color);
-        color: white;
-        box-shadow: 0 4px 12px rgba(108, 99, 255, 0
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.quick-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(254, 203, 21, 0.25);
+}
+
+.quick-button i {
+    margin-right: 6px;
+    font-size: 0.9em;
+    color: #fff;
+}
