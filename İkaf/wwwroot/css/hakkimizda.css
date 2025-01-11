@@ -330,3 +330,87 @@
         width: 100%;
     }
 }
+/* Üniversiteler Grid Tasarımı */
+.universities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.university-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+    .university-card:hover {
+        transform: translateY(-3px);
+        border-left-color: var(--primary-color);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+/* Objectives Cards İyileştirmeleri */
+.objectives-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.objectives-card li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+    .objectives-card li:before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+    }
+
+/* Hero Section İyileştirmesi */
+.about-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+    .about-hero:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05) 0%, rgba(var(--secondary-rgb), 0.05) 100%);
+        z-index: -1;
+    }
+
+/* Tab Button İyileştirmesi */
+.tab-button {
+    position: relative;
+    overflow: hidden;
+}
+
+    .tab-button:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .tab-button:hover:after,
+    .tab-button.active:after {
+        width: 100%;
+        left: 0;
+    }
