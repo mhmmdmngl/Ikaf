@@ -1,4 +1,9 @@
-﻿/* Ensure the header and dropdowns stay on top */
+﻿:root {
+    --accent-color: #6c63ff; /* Yeni vurgu rengi - modern mor */
+    --accent-hover: #5a52e0; /* Hover durumu için koyu tonu */
+}
+
+/* Header z-index */
 header {
     position: relative;
     z-index: 1000;
@@ -14,6 +19,8 @@ header {
     position: relative;
     z-index: 900;
     transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.03) 0%, rgba(35, 222, 224, 0.03) 100% );
+    border-bottom: 1px solid rgba(108, 99, 255, 0.05);
 }
 
     .quick-buttons-section.sticky {
@@ -48,7 +55,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 16px 32px;
-    background: linear-gradient(135deg, var(--primary-color), #1ab6b8);
+    background: var(--accent-color);
     color: white;
     text-decoration: none;
     border-radius: 12px;
@@ -59,7 +66,7 @@ header {
     position: relative;
     overflow: hidden;
     border: none;
-    box-shadow: 0 4px 15px rgba(35, 222, 224, 0.3);
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
 }
 
     .quick-button::before {
@@ -69,14 +76,15 @@ header {
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, 0.3), transparent );
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent );
         transition: 0.5s;
     }
 
     .quick-button:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(35, 222, 224, 0.4);
+        background: var(--primary-color);
         color: white;
+        box-shadow: 0 6px 20px rgba(35, 222, 224, 0.4);
     }
 
         .quick-button:hover::before {
@@ -105,6 +113,7 @@ header {
     }
 }
 
+/* Responsive styles */
 @media (max-width: 992px) {
     .quick-buttons-row {
         gap: 20px;

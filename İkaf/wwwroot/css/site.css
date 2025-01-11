@@ -433,3 +433,25 @@ header {
         padding: 70px 15px 15px;
     }
 }
+
+.logo-container {
+    padding: 10px 0 10px 60px; /* Soldan 30px boþluk */
+}
+
+@media (min-width: 1400px) {
+    .logo-container {
+        padding-left: 60px; /* Geniþ ekranlarda daha fazla boþluk */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        padding-left: 20px; /* Mobilde daha az boþluk */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-container {
+        padding-left: 15px; /* En küçük ekranlarda minimal boþluk */
+    }
+}

@@ -40,16 +40,51 @@
 
         .kurul-uye {
             padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
+            margin-bottom: 20px;
+            border-radius: 12px;
             background: #f8f9fa;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
-        .kurul-uye:hover {
-            transform: translateX(5px);
-            background: #f1f3f5;
-        }
+            .kurul-uye:hover {
+                transform: translateX(5px);
+                background: #f1f3f5;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            }
+
+            .kurul-uye .rektor-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid #fff;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+            }
+
+            .kurul-uye:hover .rektor-image {
+                transform: scale(1.05);
+                border-color: var(--primary-color);
+            }
+
+            .kurul-uye .rektor-info {
+                flex: 1;
+            }
+
+                .kurul-uye .rektor-info p {
+                    margin: 0;
+                    line-height: 1.6;
+                }
+
+                .kurul-uye .rektor-info strong {
+                    color: var(--dark-color);
+                    display: block;
+                    margin-bottom: 5px;
+                    font-size: 1.1em;
+                }
 
         .alt-kurul {
             margin: 30px 0;
@@ -92,110 +127,177 @@
 <div class="kurullar-container">
     <div class="kurul-bolumu danisma-kurulu">
         <h1><strong>DANIŞMA KURULU</strong></h1>
+
         <div class="kurul-uye">
-            <p>
-                Selçuk Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Hüseyin YILMAZ</strong>
-            </p>
+            <img src="~/img/rektorler/Huseyin-Yilmaz.png" alt="Prof. Dr. Hüseyin YILMAZ" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Hüseyin YILMAZ</strong>
+                    Selçuk Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Abdullah Gül Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Cengiz YILMAZ</strong>
-            </p>
+            <img src="~/img/rektorler/Cengiz-Yilmaz.png" alt="Prof. Dr. Cengiz YILMAZ" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Cengiz YILMAZ</strong>
+                    Abdullah Gül Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Afyon Kocatepe Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Mehmet KARAKAŞ</strong>
-            </p>
+            <img src="~/img/rektorler/Mehmet-Karakas.png" alt="Prof. Dr. Mehmet KARAKAŞ" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Mehmet KARAKAŞ</strong>
+                    Afyon Kocatepe Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Afyonkarahisar Sağlık Bilimleri Üni. Rektörü<br>
-                <strong>Prof. Dr. Nurullah OKUMUŞ</strong>
-            </p>
+            <img src="~/img/rektorler/Nurullah-Okumus.png" alt="Prof. Dr. Nurullah OKUMUŞ" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Nurullah OKUMUŞ</strong>
+                    Afyonkarahisar Sağlık Bilimleri Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Aksaray Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Alpay ARIBAŞ</strong>
-            </p>
+            <img src="~/img/rektorler/Alpay-Aribas.png" alt="Prof. Dr. Alpay ARIBAŞ" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Alpay ARIBAŞ</strong>
+                    Aksaray Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Erciyes Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Fatih ALTUN</strong>
-            </p>
+            <img src="~/img/rektorler/Fatih-Altun.png" alt="Prof. Dr. Fatih ALTUN" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Fatih ALTUN</strong>
+                    Erciyes Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Kapadokya Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Hasan Ali KARASAR</strong>
-            </p>
+            <img src="~/img/rektorler/Hasan-Ali-Karasar.png" alt="Prof. Dr. Hasan Ali KARASAR" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Hasan Ali KARASAR</strong>
+                    Kapadokya Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Karamanoğlu Mehmetbey Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Mehmet GAVGALI</strong>
-            </p>
+            <img src="~/img/rektorler/mehmet-gavgali.png" alt="Prof. Dr. Mehmet GAVGALI" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Mehmet GAVGALI</strong>
+                    Karamanoğlu Mehmetbey Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Kayseri Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Kurtuluş KARAMUSTAFA</strong>
-            </p>
+            <img src="~/img/rektorler/Kurtuluş-KaraMustafa.png" alt="Prof. Dr. Kurtuluş KARAMUSTAFA" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Kurtuluş KARAMUSTAFA</strong>
+                    Kayseri Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Kırıkkale Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Ersan ASLAN</strong>
-            </p>
+            <img src="~/img/rektorler/ersan_arslan.png" alt="Prof. Dr. Ersan ASLAN" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Ersan ASLAN</strong>
+                    Kırıkkale Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Kırşehir Ahi Evran Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Mustafa Kasım KARAHOCAGİL</strong>
-            </p>
+            <img src="~/img/rektorler/mustafa-kasim-hocagil.png" alt="Prof. Dr. Mustafa Kasım KARAHOCAGİL" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Mustafa Kasım KARAHOCAGİL</strong>
+                    Kırşehir Ahi Evran Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Konya Gıda ve Tarım Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Erol TURAN</strong>
-            </p>
+            <img src="~/img/rektorler/Erol-Turan.png" alt="Prof. Dr. Erol TURAN" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Erol TURAN</strong>
+                    Konya Gıda ve Tarım Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Konya Teknik Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Osman Nuri ÇELİK</strong>
-            </p>
+            <img src="~/img/rektorler/Osman-Nuri-Çelik.png" alt="Prof. Dr. Osman Nuri ÇELİK" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Osman Nuri ÇELİK</strong>
+                    Konya Teknik Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                KTO Karatay Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Fevzi Rifat ORTAÇ</strong>
-            </p>
+            <img src="~/img/rektorler/Fevzi-Rifat-Ortac.png" alt="Prof. Dr. Fevzi Rifat ORTAÇ" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Fevzi Rifat ORTAÇ</strong>
+                    KTO Karatay Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Necmettin Erbakan Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Cem ZORLU</strong>
-            </p>
+            <img src="~/img/rektorler/Cem-Zorlu.png" alt="Prof. Dr. Cem ZORLU" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Cem ZORLU</strong>
+                    Necmettin Erbakan Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Nevşehir Hacı Bektaş Veli Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Semih AKTEKİN</strong>
-            </p>
+            <img src="~/img/rektorler/semih-aktekin.png" alt="Prof. Dr. Semih AKTEKİN" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Semih AKTEKİN</strong>
+                    Nevşehir Hacı Bektaş Veli Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
+
         <div class="kurul-uye">
-            <p>
-                Nuh Naci Yazgan Üniversitesi Rektörü<br>
-                <strong>Prof. Dr. Ahmet Fazıl ÖZSOYLU</strong>
-            </p>
+            <img src="~/img/rektorler/Ahmet-Fazil-Ozsoylu.png" alt="Prof. Dr. Ahmet Fazıl ÖZSOYLU" class="rektor-image">
+            <div class="rektor-info">
+                <p>
+                    <strong>Prof. Dr. Ahmet Fazıl ÖZSOYLU</strong>
+                    Nuh Naci Yazgan Üniversitesi Rektörü
+                </p>
+            </div>
         </div>
     </div>
-
     <div class="kurul-bolumu duzenleme-kurulu">
         <h1><strong>DÜZENLEME KURULU</strong></h1>
 
