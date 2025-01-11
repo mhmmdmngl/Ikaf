@@ -36,5 +36,9 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult Rektorumuzden()
+        {
+            return View();
+        }
     }
 }
