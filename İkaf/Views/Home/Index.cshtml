@@ -1,30 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Ana Sayfa";
 }
-@* <section class="quick-buttons-section">
+<section class="quick-buttons-section">
     <div class="quick-buttons-container">
         <div class="quick-buttons-row">
             <div class="quick-button-wrapper">
                 <a href="#sponsorlar" class="quick-button">
                     <i class="fas fa-handshake"></i>
-                    SPONSORLAR
+                    SPONSORLAR/Katılımcılar
                 </a>
             </div>
-            <div class="quick-button-wrapper">
-                <a href="#konaklama" class="quick-button">
-                    <i class="fas fa-bed"></i>
-                    KONAKLAMA
-                </a>
-            </div>
-            <div class="quick-button-wrapper">
-                <a href="#kayit" class="quick-button">
-                    <i class="fas fa-user-plus"></i>
-                    KAYIT OL
-                </a>
-            </div>
+            
         </div>
     </div>
-</section> *@
+</section> 
+
 <!-- Slider Bölümü -->
 <div class="slider-container">
     <div class="swiper main-slider">
@@ -38,7 +28,7 @@
                     
                 </div>
             </div>
-            <div class="swiper-slide">
+           @*  <div class="swiper-slide">
                 <div class="slide-content">
                     <img src="https://ikaf.selcuk.edu.tr/wp-content/uploads/2024/12/slider22-1-copy.png"
                          alt="İKAF Slider 2"
@@ -46,7 +36,7 @@
                     <div class="slide-overlay"></div>
                     
                 </div>
-            </div>
+            </div> *@
             <div class="swiper-slide">
                 <div class="slide-content">
                     <img src="~/img/yetenek-kapisi.png"
@@ -124,88 +114,7 @@
 </section>
  *@
 <!-- Countdown ve Sosyal Medya Bölümü -->
-<div class="social-reels-container">
-    <!-- Başlık ve Instagram Linki -->
-    <div class="section-header">
-        <div class="title-wrapper">
-            <h2>Sosyal Medyada İKAF'25</h2>
-            <div class="title-line"></div>
-        </div>
-        <div class="social-links">
-            <a href="https://instagram.com/ikaf.2025" target="_blank" class="instagram-link">
-                <i class="fab fa-instagram"></i>
-                <span>@@ikaf.2025</span>
-            </a>
-        </div>
-    </div>
 
-    <!-- Reels Slider -->
-    <div class="swiper reels-swiper">
-        <div class="swiper-wrapper">
-            <!-- Reel 1 -->
-            <div class="swiper-slide">
-                <div class="reels-item">
-                    <iframe src="https://www.instagram.com/reel/DEkSK_Go9i-/embed/"
-                            frameborder="0"
-                            scrolling="no"
-                            allowtransparency="true">
-                    </iframe>
-                    <div class="reels-overlay">
-                        <div class="reels-info">
-                            <span class="views"><i class="fas fa-eye"></i> 76.8K</span>
-                            <a href="https://www.instagram.com/reel/DEkSK_Go9i-/" target="_blank" class="share-btn">
-                                <i class="fas fa-share"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reel 2 -->
-            <div class="swiper-slide">
-                <div class="reels-item">
-                    <iframe src="https://www.instagram.com/reel/DEAkPCWNIvK/embed/"
-                            frameborder="0"
-                            scrolling="no"
-                            allowtransparency="true">
-                    </iframe>
-                    <div class="reels-overlay">
-                        <div class="reels-info">
-                            <span class="views"><i class="fas fa-eye"></i> 82.3K</span>
-                            <a href="https://www.instagram.com/reel/DEAkPCWNIvK/" target="_blank" class="share-btn">
-                                <i class="fas fa-share"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reel 3 -->
-            <div class="swiper-slide">
-                <div class="reels-item">
-                    <iframe src="https://www.instagram.com/reel/DEPam8LM9QK/embed/"
-                            frameborder="0"
-                            scrolling="no"
-                            allowtransparency="true">
-                    </iframe>
-                    <div class="reels-overlay">
-                        <div class="reels-info">
-                            <span class="views"><i class="fas fa-eye"></i> 94.1K</span>
-                            <a href="https://www.instagram.com/reel/DEPam8LM9QK/" target="_blank" class="share-btn">
-                                <i class="fas fa-share"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navigasyon ve Pagination -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
-</div>
 
 <!-- Haberler Bölümü -->
 @* <section class="news-section">
@@ -360,221 +269,230 @@
 </div>
 
 
+<!-- İKAF Reels Section -->
+<div class="reels-section">
+    <div class="reels-header">
+        <h2>İKAF'25 Reels</h2>
+        <a href="https://instagram.com/ikaf.2025" target="_blank" class="instagram-link">
+            <i class="fab fa-instagram"></i>
+            <span>@@ikaf.2025</span>
+        </a>
+    </div>
+
+    <div class="swiper ikaf-swiper">
+        <div class="swiper-wrapper">
+            <!-- Reels buraya dinamik olarak eklenecek -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<!-- Kariyer Merkezi Reels Section -->
+<div class="reels-section">
+    <div class="reels-header">
+        <h2>Kariyer Merkezi Reels</h2>
+        <a href="https://instagram.com/selcukkariyermerkezi" target="_blank" class="instagram-link">
+            <i class="fab fa-instagram"></i>
+            <span>@@selcukkariyermerkezi</span>
+        </a>
+    </div>
+
+    <div class="swiper kariyer-swiper">
+        <div class="swiper-wrapper">
+            <!-- Reels buraya dinamik olarak eklenecek -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
 <style>
     /* Ana Container */
-    .social-reels-container {
-        padding: 40px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        background: linear-gradient(to right bottom, #ffffff, #f8f9fa);
+    .reels-section {
+        padding: 20px 15px;
+        max-width: 1400px;
+        margin: 0 auto 25px auto;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
 
-    /* Başlık Bölümü */
-    .section-header {
+    /* Header Kısmı */
+    .reels-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 40px;
-        padding: 0 10px;
+        margin-bottom: 15px;
+        padding: 0 5px;
     }
 
-    .title-wrapper {
-        position: relative;
-    }
-
-        .title-wrapper h2 {
-            font-size: 2.5em;
-            font-weight: 700;
+        .reels-header h2 {
+            font-size: 1.1em;
             color: #1a237e;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
         }
-
-    .title-line {
-        width: 80%;
-        height: 4px;
-        background: linear-gradient(to right, #405DE6, #5851DB, #833AB4);
-        border-radius: 2px;
-    }
-
-    .social-links {
-        display: flex;
-        align-items: center;
-    }
 
     .instagram-link {
         display: flex;
         align-items: center;
-        gap: 10px;
-        padding: 12px 24px;
-        background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        gap: 6px;
+        padding: 6px 12px;
+        background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584);
         color: white;
         text-decoration: none;
-        border-radius: 30px;
-        font-weight: 500;
-        font-size: 1.1em;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        border-radius: 20px;
+        font-size: 0.85em;
+        transition: all 0.2s ease;
     }
 
-        .instagram-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            color: white;
+        .instagram-link i {
+            font-size: 0.9em;
         }
 
-    /* Swiper Styles */
-    .reels-swiper {
-        width: 100%;
-        max-width: 400px;
-        height: 700px;
-        margin: 0 auto;
-        padding: 20px 0;
+        .instagram-link:hover {
+            transform: translateY(-1px);
+            color: white;
+            opacity: 0.95;
+        }
+
+    /* Swiper Ayarları */
+    .swiper {
+        padding: 5px;
     }
 
     .swiper-slide {
-        border-radius: 20px;
+        height: 500px;
+        border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
-    .reels-item {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: #f8f9fa;
-    }
-
-        .reels-item iframe {
+        .swiper-slide iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border: none;
         }
 
-    .reels-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 20px;
-        background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    }
-
-    .reels-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-    }
-
-    .views {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 1.1em;
-    }
-
-    .share-btn {
-        width: 45px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255,255,255,0.2);
-        border-radius: 50%;
-        color: white;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(5px);
-    }
-
-        .share-btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.1);
-            color: white;
-        }
-
-    /* Swiper Navigation */
+    /* Navigasyon Butonları */
     .swiper-button-next,
     .swiper-button-prev {
         color: #1a237e;
         background: rgba(255, 255, 255, 0.9);
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-            background: white;
-            transform: scale(1.1);
-        }
 
         .swiper-button-next:after,
         .swiper-button-prev:after {
-            font-size: 20px;
+            font-size: 15px;
             font-weight: bold;
         }
 
     /* Pagination */
     .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
         background: #1a237e;
-        opacity: 0.5;
-        transition: all 0.3s ease;
+        opacity: 0.6;
     }
 
     .swiper-pagination-bullet-active {
         opacity: 1;
-        width: 30px;
-        border-radius: 5px;
     }
 
-    /* Responsive Tasarım */
+    /* Responsive */
     @@media (max-width: 768px) {
-        .section-header
+        .swiper-slide
 
     {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+        height: 400px;
     }
 
-    .title-wrapper {
-        margin-bottom: 10px;
+    .reels-header {
+        flex-direction: row;
+        gap: 10px;
     }
 
-    .title-line {
-        margin: 0 auto;
-    }
+        .reels-header h2 {
+            font-size: 1em;
+        }
 
-    .title-wrapper h2 {
-        font-size: 2em;
-    }
-
-    .reels-swiper {
-        max-width: 340px;
-        height: 600px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 40px;
-        height: 40px;
+    .instagram-link {
+        padding: 5px 10px;
+        font-size: 0.8em;
     }
 
     }
 </style>
-
 <script>
+    // IKAF Reels Data
+    const ikafReelsData = [
+        {
+            id: 'DEkSK_Go9i-',
+            embedUrl: 'https://www.instagram.com/p/DEkSK_Go9i-/embed/'
+        },
+        {
+            id: 'DDoaXaCof1K',
+            embedUrl: 'https://www.instagram.com/reel/DDoaXaCof1K/embed'
+        },
+        {
+            id: 'DEAkPCWNIvK',
+            embedUrl: 'https://www.instagram.com/reel/DEAkPCWNIvK/embed/'
+        }
+    ];
+
+    // Kariyer Merkezi Reels Data
+    const kariyerReelsData = [
+        {
+            id: 'DEsIVAxIfs2',
+            embedUrl: 'https://www.instagram.com/reel/DEsIVAxIfs2/embed/'
+        },
+        {
+            id: 'DEMoo_hIh6P',
+            embedUrl: 'https://www.instagram.com/reel/DEMoo_hIh6P/embed/'
+        },
+        {
+            id: 'DDEhINbI11g',
+            embedUrl: 'https://www.instagram.com/reel/DDEhINbI11g/embed/'
+        }
+    ];
+
     document.addEventListener('DOMContentLoaded', function() {
-        const swiper = new Swiper('.reels-swiper', {
-            effect: 'cards',
-            grabCursor: true,
+        // IKAF Reels'lerini ekle
+        const ikafWrapper = document.querySelector('.ikaf-swiper .swiper-wrapper');
+        ikafReelsData.forEach(reel => {
+            ikafWrapper.innerHTML += `
+                <div class="swiper-slide">
+                    <iframe src="${reel.embedUrl}"
+                            scrolling="no"
+                            allowtransparency="true"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            `;
+        });
+
+        // Kariyer Merkezi Reels'lerini ekle
+        const kariyerWrapper = document.querySelector('.kariyer-swiper .swiper-wrapper');
+        kariyerReelsData.forEach(reel => {
+            kariyerWrapper.innerHTML += `
+                <div class="swiper-slide">
+                    <iframe src="${reel.embedUrl}"
+                            scrolling="no"
+                            allowtransparency="true"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            `;
+        });
+
+        // Swiper'ları başlat
+        const swiperOptions = {
+            slidesPerView: 3,
+            spaceBetween: 20,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -583,12 +501,26 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            cardsEffect: {
-                perSlideOffset: 8,
-                perSlideRotate: 2,
-                rotate: true,
-                slideShadows: true,
+            breakpoints: {
+                // mobile
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // tablet
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                // desktop
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
             }
-        });
+        };
+
+        new Swiper('.ikaf-swiper', swiperOptions);
+        new Swiper('.kariyer-swiper', swiperOptions);
     });
 </script>

@@ -1,38 +1,33 @@
 ﻿:root {
-    --accent-color: #6c63ff; /* Yeni vurgu rengi - modern mor */
-    --accent-hover: #5a52e0; /* Hover durumu için koyu tonu */
-}
-
-/* Header z-index */
-header {
-    position: relative;
-    z-index: 1000;
-}
-
-.main-navigation .submenu {
-    z-index: 1001;
+    --accent-color: #6c63ff;
+    --accent-hover: #5a52e0;
 }
 
 .quick-buttons-section {
     width: 100%;
-    padding: 20px 0;
+    padding: 8px 0; /* Daha ince görünüm için padding'i azalttım */
     position: relative;
     z-index: 900;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.03) 0%, rgba(35, 222, 224, 0.03) 100% );
+    background: linear-gradient(-45deg, rgba(108, 99, 255, 0.05), rgba(35, 222, 224, 0.05));
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
     border-bottom: 1px solid rgba(108, 99, 255, 0.05);
 }
 
-    .quick-buttons-section.sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
-        animation: slideDown 0.3s ease-out;
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
     }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 .quick-buttons-container {
     max-width: 1200px;
@@ -43,108 +38,32 @@ header {
 .quick-buttons-row {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .quick-button-wrapper {
-    flex: 0 1 280px;
+    flex: 0 1 auto; /* Auto width yerine sabit genişlik kaldırdım */
 }
 
 .quick-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 32px;
-    background: var(--accent-color);
-    color: white;
+    padding: 8px 20px; /* Daha ince görünüm */
+    background: white;
+    color: var(--accent-color);
     text-decoration: none;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1.1em;
-    letter-spacing: 0.5px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    border: none;
-    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.2);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.1);
 }
-
-    .quick-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent );
-        transition: 0.5s;
-    }
 
     .quick-button:hover {
-        transform: translateY(-3px);
-        background: var(--primary-color);
+        transform: translateY(-2px);
+        background: var(--accent-color);
         color: white;
-        box-shadow: 0 6px 20px rgba(35, 222, 224, 0.4);
-    }
-
-        .quick-button:hover::before {
-            left: 100%;
-        }
-
-    .quick-button i {
-        margin-right: 12px;
-        font-size: 1.3em;
-        transition: transform 0.3s ease;
-    }
-
-    .quick-button:hover i {
-        transform: scale(1.1);
-    }
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Responsive styles */
-@media (max-width: 992px) {
-    .quick-buttons-row {
-        gap: 20px;
-    }
-
-    .quick-button {
-        padding: 14px 24px;
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 768px) {
-    .quick-buttons-section {
-        padding: 15px 0;
-    }
-
-    .quick-buttons-container {
-        padding: 0 20px;
-    }
-
-    .quick-buttons-row {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .quick-button-wrapper {
-        flex: none;
-        width: 100%;
-    }
-
-    .quick-button {
-        padding: 12px 20px;
-    }
-}
+        box-shadow: 0 4px 12px rgba(108, 99, 255, 0
