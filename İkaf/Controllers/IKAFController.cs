@@ -40,5 +40,9 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult DuzenlemeKurulu()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,174 @@
+﻿.duzenlemekurulu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.duzenlemekurulu-title {
+    text-align: center;
+    color: #002147;
+    margin-bottom: 50px;
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+    .duzenlemekurulu-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(to right, #002147, #0056b3);
+    }
+
+.section {
+    margin-bottom: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+    .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+.section-title {
+    background: linear-gradient(135deg, #002147 0%, #003366 100%);
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+    .section-title i {
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+
+.section-content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.member {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+    .member:hover {
+        background: #fff;
+        border-left-color: #002147;
+        transform: translateX(5px);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+.member-name {
+    color: #002147;
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+    .member-name i {
+        margin-right: 8px;
+        color: #0056b3;
+    }
+
+.member-title {
+    color: #495057;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    padding-left: 24px;
+}
+
+.member-email {
+    color: #0056b3;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+
+    .member-email i {
+        margin-right: 8px;
+        font-size: 0.9em;
+    }
+
+    .member-email:hover {
+        color: #003d82;
+        text-decoration: none;
+    }
+
+/* Team Sections Specific Styles */
+.team-section .member {
+    background: #f8f9fa;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.team-section .section-title {
+    background: linear-gradient(135deg, #003366 0%, #004a94 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .duzenlemekurulu-container {
+        padding: 20px 15px;
+    }
+
+    .duzenlemekurulu-title {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+        padding: 12px 20px;
+    }
+
+    .member {
+        padding: 15px;
+    }
+
+    .member-name {
+        font-size: 1.1em;
+    }
+}
+
+/* Animation for sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+    .section:nth-child(even) {
+        animation-delay: 0.2s;
+    }
