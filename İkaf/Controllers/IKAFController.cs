@@ -32,5 +32,9 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult DanismaKurulu()
+        {
+            return View();
+        }
     }
 }
