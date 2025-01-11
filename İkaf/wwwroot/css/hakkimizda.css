@@ -123,3 +123,88 @@
         font-size: 1.5em;
     }
 }
+
+.about-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 60px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.main-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.content-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
+
+.university-title {
+    font-size: 1.8em;
+    margin: 40px 0 20px;
+    text-align: center;
+    color: #333;
+}
+
+.university-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.university-item {
+    padding: 15px 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border-left: 3px solid #0057a3;
+    transition: all 0.3s ease;
+}
+
+    .university-item:hover {
+        transform: translateX(5px);
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+.final-note {
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .university-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .university-title {
+        font-size: 1.5em;
+    }
+}
