@@ -455,3 +455,52 @@ header {
         padding-left: 15px; /* En küçük ekranlarda minimal boþluk */
     }
 }
+
+/* Medya menü öðesi için Instagram tarzý stil */
+.highlight-menu > a {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    background-size: 200% 200%;
+    color: white !important;
+    border-radius: 8px;
+    padding: 12px 20px !important;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.highlight-menu > a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(253, 29, 29, 0.3);
+}
+
+.highlight-menu > a .menu-icon {
+    color: white !important;
+}
+
+/* Medya alt menüsü için stil */
+.media-submenu {
+    background: white;
+    border: 1px solid rgba(131, 58, 180, 0.1);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+    .media-submenu li a:hover {
+        border-left: 3px solid #fd1d1d;
+        background: linear-gradient(to right, rgba(131, 58, 180, 0.05), rgba(253, 29, 29, 0.05));
+        padding-left: 25px;
+    }
