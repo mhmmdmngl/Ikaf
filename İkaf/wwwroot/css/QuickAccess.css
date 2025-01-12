@@ -1,7 +1,8 @@
 ﻿/* Hızlı Erişim Bölümü Stilleri */
 .quick-access {
     padding: 40px 0;
-    background-color: #fff;
+    background: linear-gradient(-45deg, rgba(35, 222, 224, 0.05), rgba(254, 203, 21, 0.05));
+    position: relative;
 }
 
 .quick-access-grid {
@@ -15,27 +16,34 @@
 
 .quick-access-item {
     position: relative;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease forwards;
 }
 
     .quick-access-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px) scale(1.02);
     }
 
 .quick-card {
     display: block;
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(35, 222, 224, 0.1);
     aspect-ratio: 1;
+    background: white;
+    transition: all 0.4s ease;
 }
+
+    .quick-card:hover {
+        box-shadow: 0 15px 35px rgba(35, 222, 224, 0.2);
+    }
 
     .quick-card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.3s ease;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .quick-overlay {
@@ -43,27 +51,80 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    padding: 20px 10px;
+    background: linear-gradient(to top, rgba(35, 222, 224, 0.9), rgba(254, 203, 21, 0.2) );
+    padding: 25px 15px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .quick-card:hover .quick-overlay {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .quick-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .quick-overlay span {
     color: white;
-    font-size: 0.9em;
-    font-weight: 500;
+    font-size: 1em;
+    font-weight: 600;
     text-align: center;
     display: block;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    position: relative;
+    padding-bottom: 5px;
+}
+
+    .quick-overlay span:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: white;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
+
+.quick-card:hover .quick-overlay span:after {
+    width: 50%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Her karta farklı animasyon gecikmesi */
+.quick-access-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.quick-access-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.quick-access-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.quick-access-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.quick-access-item:nth-child(6) {
+    animation-delay: 0.5s;
 }
 
 /* Responsive Tasarım */
@@ -82,6 +143,14 @@
     .quick-access {
         padding: 20px 0;
     }
+
+    .quick-overlay {
+        padding: 20px 12px;
+    }
+
+        .quick-overlay span {
+            font-size: 0.9em;
+        }
 }
 
 @media (max-width: 480px) {
@@ -91,6 +160,11 @@
 
     .quick-overlay {
         opacity: 1;
-        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(35, 222, 224, 0.9), rgba(254, 203, 21, 0.3) );
+    }
+
+    .quick-card:hover {
+        transform: scale(1.02);
     }
 }
