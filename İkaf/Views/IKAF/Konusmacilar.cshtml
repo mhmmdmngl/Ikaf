@@ -1,0 +1,186 @@
+﻿<main class="speakers-content">
+    <h1 class="duzenlemekurulu-title">Konuşmacılar</h1>
+
+
+    <div class="speakers-grid">
+        <!-- Konuşmacı 1 -->
+        <div class="speaker-card">
+            <div class="speaker-image">
+                <img src="/img/hamitkeles.jpg" alt="Hamit Keleş" loading="lazy">
+            </div>
+            <div class="speaker-info">
+                <h2>Hamit Keleş</h2>
+                <h3>VR Uzmanı</h3>
+                <div class="speaker-bio">
+                    <p>1997 yılına kadar TSK'da görev yapan Hamit Keleş, 2001-2021 yılları arasında Dijital Sanatlar Film Yapım, C4 Reklam Ajansı, ONIKS Film Yapım son olarak SpaceWalkerVR şirketlerinde Kurucu ortaklık yaptı.</p>
+                    <p>Türk sinema tarihinde büyük ses getiren, gişe rekorlarını alt üst eden Fetih 1453 filminin Yapımcılığını ve Görsel Efekt Yönetmenliğini üstlendi.</p>
+                    <p>SpaceWalkerVR (Dünyanın ilk Sanal Gerçeklik Yürüyüş Simülatörü) ve SpaceRiderVR Tasarımı ve Mühendisliğini, Tribix 3 Tekerlekli Elektrikli Araç Tasarımı ve Mühendisliği projelerini hayata geçirmiştir.</p>
+                    <p>Sibernetik konusunda çalışmalar da yapan Hamit Keleş, Solaris Digital Academy ve SpaceWalkerVR'da kurucu ortak ve yönetici olarak kariyerine devam etmektedir.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Konuşmacı 2 -->
+        <div class="speaker-card">
+            <div class="speaker-image">
+                <img src="/img/cananalkin.png" alt="Canan Alkın" loading="lazy">
+            </div>
+            <div class="speaker-info">
+                <h2>Canan Alkın</h2>
+                <h3>Robot İstihdam Ajansı Kurucusu</h3>
+                <div class="speaker-bio">
+                    <p>İTÜ TMDK ve Anadolu Üniversitesi İşletme bölümü mezunu olan Canan Alkın, ön lisans bölümleri olarak Halkla İlişkiler, Sosyal Hizmet Uzmanlığı eğitimleri aldı.</p>
+                    <p>Otomotiv sektöründe işe başlayan Alkın, Rover ve Mini Cooper distribütörü Boronkay Otomotiv'de çalıştı. Ardından Bayındır Holding ve uzun dönem holdingin farklı işletmelerinde Satış & Pazarlama Müdürü ve Kurumsal iletişim pozisyonlarında görev aldı.</p>
+                    <p>16 yıllık Bayındır Grubu tecrübesi sonrasında Türkiye İş Bankası A.Ş iştiraki Bayek A.Ş.'de Avrupa Yakası Bölge Sorumlusu olarak çalıştı. Gruba bağlı farklı şirketlerde çalışmasının ardından Makro İnşaat'ta Genel Müdür Yardımcılığı, TerzionDX Genel Müdür Yardımcılığı ile IT sektörüne girdi.</p>
+                    <p>Canan Alkın, kurumsal deneyimlerinin ardından işletmelerin dijital çağ için işlerini yeniden tasarlamalarına yardımcı olan yeni nesil bir danışmanlık firması olan Robot İstihdam Ajansı'nı kurdu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .speakers-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .speakers-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+            .speakers-header h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #1a1a1a;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 1rem;
+            }
+
+                .speakers-header h1::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100px;
+                    height: 3px;
+                    background: #23dee0;
+                    border-radius: 2px;
+                }
+
+        .speakers-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .speaker-card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+            .speaker-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .speaker-image {
+            width: 100%;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+            .speaker-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+        .speaker-card:hover .speaker-image img {
+            transform: scale(1.05);
+        }
+
+        .speaker-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+            .speaker-info h2 {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #23dee0;
+                margin: 0;
+            }
+
+            .speaker-info h3 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: #666;
+                margin: 0;
+            }
+
+        .speaker-bio {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+            .speaker-bio p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #4a4a4a;
+                margin: 0;
+            }
+
+        @@media (max-width: 992px) {
+            .speaker-card
+
+        {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .speaker-image {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        }
+
+        @@media (max-width: 576px) {
+            .speakers-content
+
+        {
+            padding: 1rem;
+        }
+
+        .speakers-header h1 {
+            font-size: 2.5rem;
+        }
+
+        .speaker-info h2 {
+            font-size: 1.75rem;
+        }
+
+        .speaker-info h3 {
+            font-size: 1.1rem;
+        }
+
+        .speaker-bio p {
+            font-size: 0.95rem;
+        }
+
+        }
+    </style>
+</main>

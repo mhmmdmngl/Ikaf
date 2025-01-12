@@ -78,6 +78,10 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult Konusmacilar()
+        {
+            return View();
+        }
         public IActionResult KilavuzIndir()
         {
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "docs", "IKAF_Sponsor_Katilimci_Kilavuzu.pdf");
