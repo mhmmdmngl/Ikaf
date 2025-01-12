@@ -48,5 +48,23 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult FirmaKayit()
+        {
+            return View();
+        }
+
+        public IActionResult Video()
+        {
+            return View();
+        }
+
+        public IActionResult Animasyon()
+        {
+            return View();
+        }
+        public IActionResult YerlesimPlan()
+        {
+            return View();
+        }
     }
 }

@@ -62,14 +62,14 @@
                                         <li><a href="#gonullu-ogrenciler"><i class="fas fa-hands-helping menu-icon"></i>Gönüllü Öğrencilerimiz</a></li>
                                     </ul>
                                 </li>
-
+                                
                                 <!-- Fuar Alanı -->
                                 <li class="menu-item has-submenu">
                                     <a href="#"><i class="fas fa-map-marked-alt menu-icon"></i>Fuar Alanı</a>
                                     <ul class="submenu">
-                                        <li><a href="#fuar-video"><i class="fas fa-play-circle menu-icon"></i>Video</a></li>
-                                        <li><a href="#animasyon"><i class="fas fa-film menu-icon"></i>Animasyon</a></li>
-                                        <li><a href="#kat-plani"><i class="fas fa-map menu-icon"></i>Kat Planı</a></li>
+                                        <li><a href=@Url.Action("Video","Ikaf")><i class="fas fa-play-circle menu-icon"></i>Video</a></li>
+                                        <li><a href=@Url.Action("Animasyon","Ikaf")><i class="fas fa-film menu-icon"></i>Animasyon</a></li>
+                                        <li><a href=@Url.Action("YerlesimPlan","Ikaf")><i class="fas fa-map menu-icon"></i>Kat Planı</a></li>
                                     </ul>
                                 </li>
 
@@ -94,18 +94,18 @@
                                     <a href="#" class="glow-effect"><i class="fas fa-user-plus menu-icon"></i>Kayıt</a>
                                     <ul class="submenu">
                                         <li><a href=@Url.Action("OgrenciKayit","Ikaf")><i class="fas fa-user-graduate menu-icon"></i>Öğrenci Kayıt</a></li>
-                                        <li><a href="#isveren-kayit"><i class="fas fa-briefcase menu-icon"></i>İşveren Kayıt</a></li>
+                                        <li><a href=@Url.Action("FirmaKayit","Ikaf")><i class="fas fa-briefcase menu-icon"></i>İşveren Kayıt</a></li>
                                     </ul>
                                 </li>
 
                                 <!-- Konaklama -->
                                 <li class="menu-item">
-                                    <a href=@Url.Action("Konaklama","Ikaf")><i class="fas fa-bed menu-icon"></i>Konaklama</a>
+                                    <a href=@Url.Action("","Ikaf")><i class="fas fa-bed menu-icon"></i>Konaklama</a>
                                 </li>
 
                                 <!-- İletişim -->
                                 <li class="menu-item">
-                                    <a href="#iletisim"><i class="fas fa-envelope menu-icon"></i>İletişim</a>
+                                    <a href="#"><i class="fas fa-envelope menu-icon"></i>İletişim</a>
                                 </li>
                             </ul>
                         </div>

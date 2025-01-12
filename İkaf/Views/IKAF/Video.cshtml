@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<div class="video-container">
+    <div class="video-header">
+        <h1>İKAF'25 Tanıtım Filmi</h1>
+        <p>İç Anadolu Kariyer Fuarı</p>
+    </div>
+    <div class="video-wrapper" onclick="openModal()">
+        <video class="preview-video" poster="/img/skmvideo.jpeg">
+            <source src="/vid/animasyon.mp4" type="video/mp4">
+        </video>
+        <div class="play-overlay">
+            <i class="fas fa-play-circle"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Video Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">
+            <i class="fas fa-times"></i>
+        </span>
+        <video id="modalVideo" controls>
+            <source src="/vid/animasyon.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<style>
+    .video-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .video-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+        .video-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .video-header p {
+            font-size: 1.2rem;
+            color: #666;
+            letter-spacing: 0.5px;
+        }
+
+    @@media (max-width: 768px) {
+        .video-header h1
+
+    {
+        font-size: 1.8rem;
+    }
+
+    .video-header p {
+        font-size: 1rem;
+    }
+
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .video-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+    .preview-video {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+    }
+
+    .play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+    }
+
+        .play-overlay i {
+            font-size: 4rem;
+            color: white;
+            opacity: 0.9;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+    .video-wrapper:hover .play-overlay {
+        background: rgba(0,0,0,0.4);
+    }
+
+        .video-wrapper:hover .play-overlay i {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+        .modal.show {
+            opacity: 1;
+        }
+
+    .modal-content {
+        position: relative;
+        width: 90%;
+        max-width: 1200px;
+        margin: 2rem auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: -2.5rem;
+        right: 0;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1010;
+        transition: transform 0.3s ease;
+    }
+
+        .close-btn:hover {
+            transform: scale(1.1);
+        }
+
+    #modalVideo {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    /* Mobile Optimizations */
+    @@media (max-width: 768px) {
+        .video-container
+
+    {
+        margin: 1rem auto;
+    }
+
+    .play-overlay i {
+        font-size: 3rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .close-btn {
+        top: -2rem;
+        font-size: 1.25rem;
+    }
+
+    }
+</style>
+
+<script>
+    function openModal() {
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        modal.style.display = 'block';
+        setTimeout(() => modal.classList.add('show'), 10);
+
+        modalVideo.play();
+
+        // Handle mobile device orientation change
+        window.addEventListener('orientationchange', adjustModalVideo);
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+
+        modalVideo.pause();
+
+        window.removeEventListener('orientationchange', adjustModalVideo);
+    }
+
+    function adjustModalVideo() {
+        setTimeout(() => {
+            const modalVideo = document.getElementById('modalVideo');
+            modalVideo.style.height = window.innerHeight * 0.8 + 'px';
+        }, 100);
+    }
+
+    // Close modal when clicking outside the video
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    // Handle ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+</script>

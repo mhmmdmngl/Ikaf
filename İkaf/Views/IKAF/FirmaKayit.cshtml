@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<div class="register-container">
+    <div class="register-header">
+        <div class="header-content">
+            <h1>Firma / Kurum</h1>
+            <p>Kariyer Fuarı Kayıt Süreci</p>
+        </div>
+    </div>
+
+    <div class="steps-wrapper">
+        <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>Başvuru</h2>
+                </div>
+                <p>Firma ve kurumların stant alanı, sponsorluk, sunum vs. için ilk önce firma/kurum katılım formunu doldurmaları gerekmektedir.</p>
+                <a href="#" class="btn-apply">
+                    <i class="fas fa-edit"></i>
+                    <span>Başvuru Yap</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-user-plus"></i>
+                    <h2>Kayıt</h2>
+                </div>
+                <p>yetenekkapisi.org adresinden sisteme kayıt olunuz. Soldaki menüden bağlantı kurmak istediğiniz üniversiteleri seçip istek gönderiniz.</p>
+                <a href="https://www.yetenekkapisi.org/company_register" class="btn-apply" target="_blank">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Kayıt Ol</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-university"></i>
+                    <h2>Onay Süreci</h2>
+                </div>
+                <p>İstek gönderdikten sonra BATIKAF fuarına ev sahibi üniversite tarafından ekleneceksiniz.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-tasks"></i>
+                    <h2>Fuar Sekmesi</h2>
+                </div>
+                <p>Fuara eklendikten sonra sisteme girdiğinizde soldaki menüden 'Kariyer Fuarı' sekmesine tıklayınız.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">5</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-bell"></i>
+                    <h2>Fuar İstekleri</h2>
+                </div>
+                <p>Açılan 'Kariyer Fuarları' sayfasında, 'İstekler' butonuna tıklayarak size gelen kariyer fuarları isteklerini görüntüleyebilirsiniz ve 'Eylemler' başlığı altındaki 'Onayla' butonuna tıklayarak istediğiniz fuarları onaylayabilirsiniz.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">6</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-calendar-plus"></i>
+                    <h2>Etkinlik</h2>
+                </div>
+                <p>'Kariyer Fuarı' sekmesinden 'Etkinlik Ekle' butonuna tıklayarak fuarda düzenleyeceğiniz etkinlik bilgilerini girebilirsiniz.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">7</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Bilgi Erişimi</h2>
+                </div>
+                <p>Fuarla ilgili katılımcı firma/kurum, katılacak öğrenci vs. bilgilerine erişim sağlayabileceksiniz.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">8</span>
+            <div class="step-content">
+                <div class="step-header">
+                    <i class="fas fa-network-wired"></i>
+                    <h2>Platform</h2>
+                </div>
+                <p>Kariyer Fuarları haricinde de Yetenek Kapısı platformundan faydalanabileceksiniz.</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .register-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+            background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+            .header-content h1::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background: #fff;
+                border-radius: 2px;
+            }
+
+        .header-content p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .steps-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .step {
+            position: relative;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 1.25rem;
+            display: flex;
+            gap: 0.75rem;
+            transition: all 0.2s ease;
+        }
+
+            .step:hover {
+                border-color: #7C3AED;
+                transform: translateY(-1px);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+
+        .step-number {
+            background: #7C3AED;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+            .step-header i {
+                color: #7C3AED;
+                font-size: 0.9rem;
+            }
+
+            .step-header h2 {
+                font-size: 0.95rem;
+                font-weight: 500;
+                color: #333;
+                margin: 0;
+            }
+
+        .step p {
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .btn-apply {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #7C3AED;
+            color: white;
+            text-decoration: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: all 0.2s ease;
+        }
+
+            .btn-apply:hover {
+                background: #6D28D9;
+                transform: translateY(-1px);
+            }
+
+            .btn-apply i {
+                font-size: 0.85rem;
+            }
+
+        @@media (max-width: 768px) {
+            .register-container
+
+        {
+            padding: 1rem;
+        }
+
+        .header-content h1 {
+            font-size: 1.5rem;
+        }
+
+        .steps-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        }
+    </style>
+</div>
