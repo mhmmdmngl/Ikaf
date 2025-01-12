@@ -1,18 +1,17 @@
-﻿/* Sponsors Ana Container */
+﻿/* Ana Container */
 .sponsors-section {
-    padding: 80px 0;
+    padding: 60px 15px;
     background: linear-gradient(-45deg, rgba(35, 222, 224, 0.03), rgba(254, 203, 21, 0.03));
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
 }
 
-/* Ana Başlık Stili */
 .section-heading {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .sponsors-title {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #000;
     font-weight: 700;
     position: relative;
@@ -33,113 +32,92 @@
 
 /* Sponsor Kategorileri */
 .sponsors-category {
-    max-width: 1400px;
-    margin: 0 auto 100px;
-    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 30px 20px;
     position: relative;
-    border-radius: 15px;
+    border-radius: 12px;
     background: #fff;
 }
 
 /* Kategori Header */
 .category-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     position: relative;
 }
 
 .category-stars {
     color: var(--category-color);
-    font-size: 24px;
-    letter-spacing: 15px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin-bottom: 8px;
     animation: starShine 2s infinite ease-in-out;
 }
 
 .category-title {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    position: relative;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
     color: #000;
 }
 
 .category-line {
-    width: 120px;
+    width: 100px;
     height: 3px;
     margin: 0 auto;
     background: var(--category-color);
     transition: width 0.3s ease;
 }
 
-/* Kategori Renkleri ve Stilleri */
+/* Kategori Renkleri */
 .platinum {
     --category-color: #e5e4e2;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     z-index: 5;
 }
 
 .gold {
     --category-color: #ffd700;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     z-index: 4;
 }
 
 .silver {
     --category-color: #c0c0c0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     z-index: 3;
 }
 
 .bronze {
     --category-color: #cd7f32;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     z-index: 2;
 }
 
 .event {
     --category-color: #23dee0;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     z-index: 1;
 }
 
 /* Grid Yapısı */
 .sponsors-grid {
     display: grid;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
-}
-
-.platinum .sponsors-grid {
-    grid-template-columns: repeat(2, minmax(350px, 450px));
-}
-
-.gold .sponsors-grid {
-    grid-template-columns: repeat(2, minmax(300px, 400px));
-}
-
-.silver .sponsors-grid {
-    grid-template-columns: repeat(2, minmax(250px, 350px));
-}
-
-.bronze .sponsors-grid {
-    grid-template-columns: repeat(3, minmax(200px, 300px));
-}
-
-.event .sponsors-grid {
-    grid-template-columns: repeat(2, minmax(200px, 300px));
 }
 
 /* Sponsor Kartları */
 .sponsor-card {
     background: white;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
-    transition: all 0.4s ease;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
     aspect-ratio: 16/9;
     display: flex;
     align-items: center;
@@ -148,15 +126,15 @@
 }
 
     .sponsor-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 40px rgba(35, 222, 224, 0.15);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(35, 222, 224, 0.12);
     }
 
     .sponsor-card img {
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 85%;
+        max-height: 85%;
         object-fit: contain;
-        transition: transform 0.4s ease;
+        transition: transform 0.3s ease;
     }
 
     .sponsor-card:hover img {
@@ -164,7 +142,7 @@
     }
 
 /* Animasyonlar */
-@@keyframes starShine {
+@keyframes starShine {
     0%, 100% {
         opacity: 0.8;
         transform: scale(1);
@@ -176,85 +154,106 @@
     }
 }
 
-/* Responsive Design */
-@@media (max-width: 1400px) {
-    .sponsors-grid {
-        gap: 30px;
-    }
-
-    .platinum .sponsors-grid,
-    .gold .sponsors-grid {
+/* Responsive Tasarım */
+@media (min-width: 992px) {
+    .platinum .sponsors-grid {
         grid-template-columns: repeat(2, minmax(300px, 400px));
     }
-}
 
-@@media (max-width: 992px) {
-    .sponsors-title {
-        font-size: 2.5em;
+    .gold .sponsors-grid {
+        grid-template-columns: repeat(2, minmax(280px, 380px));
     }
 
-    .category-title {
-        font-size: 2em;
+    .silver .sponsors-grid {
+        grid-template-columns: repeat(2, minmax(260px, 360px));
     }
 
-    .sponsors-grid {
-        gap: 25px;
-    }
-
-    .platinum .sponsors-grid,
-    .gold .sponsors-grid,
-    .silver .sponsors-grid,
     .bronze .sponsors-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, minmax(220px, 300px));
+    }
+
+    .event .sponsors-grid {
+        grid-template-columns: repeat(2, minmax(240px, 320px));
     }
 }
 
-@@media (max-width: 768px) {
-    .sponsors-section {
-        padding: 50px 0;
+@media (min-width: 768px) and (max-width: 991px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .sponsor-card {
+        padding: 25px;
     }
 
     .sponsors-title {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 767px) {
+    .sponsors-section {
+        padding: 40px 10px;
     }
 
-    .category-title {
+    .sponsors-title {
         font-size: 1.8em;
     }
 
     .sponsors-category {
-        padding: 30px 20px;
-        margin-bottom: 60px;
+        padding: 20px 15px;
+        margin-bottom: 30px;
     }
 
     .sponsors-grid {
-        gap: 20px;
+        grid-template-columns: 1fr !important;
+        gap: 15px;
     }
 
     .sponsor-card {
         padding: 20px;
-    }
-
-    .category-stars {
-        font-size: 20px;
-        letter-spacing: 10px;
-    }
-}
-
-@@media (max-width: 576px) {
-    .sponsors-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .category-title {
-        font-size: 1.6em;
-    }
-
-    .sponsor-card {
         aspect-ratio: 16/10;
     }
 
+    .category-title {
+        font-size: 1.4rem;
+    }
+
+    .category-stars {
+        font-size: 16px;
+        letter-spacing: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors-section {
+        padding: 30px 8px;
+    }
+
+    .sponsors-title {
+        font-size: 1.6em;
+    }
+
+        .sponsors-title:after {
+            width: 100px;
+        }
+
     .sponsors-category {
-        padding: 20px 15px;
+        padding: 15px 12px;
+        margin-bottom: 25px;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .sponsor-card {
+        padding: 15px;
+    }
+
+    .category-stars {
+        font-size: 14px;
+        letter-spacing: 6px;
     }
 }
