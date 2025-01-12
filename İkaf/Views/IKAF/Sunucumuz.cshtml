@@ -1,8 +1,135 @@
-﻿
-@{
-    ViewData["Title"] = "Sunucumuz";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿<div class="presenter-section">
+    <div class="presenter-container">
+        <div class="presenter-content">
+            <div class="presenter-image">
+                <img src="~/img/eliftumen.jpg" alt="Elif Tümen" />
+            </div>
+            <div class="presenter-info">
+                <h1 class="title">IKAF'25 Sunucumuz</h1>
+                <h2 class="name">Elif Tümen</h2>
 
-<h1>Sunucumuz</h1>
+                <div class="bio">
+                    <p>1990 Eskişehir doğumlu Elif Tümen, 2014'ten bu yana profesyonel televizyon program sunuculuğu yapmaktadır.</p>
 
+                    <p>Selçuk Üniversitesi İletişim Fakültesi mezunu olan Tümen, aynı üniversitede Radyo, Televizyon ve Sinema yüksek lisansını tamamlamıştır.</p>
+
+                    <p>Kariyeri boyunca Turkcell, Akbank, Türk Telekom, Elidor gibi markaların reklamlarında rol almanın yanı sıra, CNN TÜRK, NTV, Star TV ve Kral TV'de Pop Vizyon, En Güzel Bölüm, En Güzel Rotalar, Kral Sürpriz gibi programları sunmuştur.</p>
+
+                    <p>2019'da dünya turu deneyimlerini YouTube kanalında paylaşmaya başlayan Tümen, aynı yıl Teoman'ın "Sürpriz" şarkısını Febyo Taşel'in proje albümünde seslendirmiştir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .presenter-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.05), rgba(16, 185, 129, 0.05));
+        }
+
+        .presenter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .presenter-content {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 3rem;
+            align-items: start;
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .presenter-image {
+            position: relative;
+        }
+
+            .presenter-image img {
+                width: 100%;
+                height: auto;
+                border-radius: 0.75rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+        .presenter-info {
+            padding: 1rem 0;
+        }
+
+        .title {
+            color: #059669;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+            .name::after {
+                content: '';
+                position: absolute;
+                bottom: -0.75rem;
+                left: 0;
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(90deg, #059669, #10b981);
+                border-radius: 2px;
+            }
+
+        .bio p {
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+
+        @@media (max-width: 992px) {
+            .presenter-content
+
+        {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .presenter-image {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        }
+
+        @@media (max-width: 640px) {
+            .presenter-section
+
+        {
+            padding: 2rem 0;
+        }
+
+        .presenter-container {
+            padding: 0 1rem;
+        }
+
+        .presenter-content {
+            padding: 1.5rem;
+        }
+
+        .name {
+            font-size: 2rem;
+        }
+
+        .bio p {
+            font-size: 1rem;
+        }
+
+        }
+    </style>
+</div>
