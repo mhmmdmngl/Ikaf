@@ -4,36 +4,14 @@
         <h1>Yerleşim Planı</h1>
     </div>
 
-    <div class="layout-content">
-        <!-- Sol Taraf - Resimler -->
-        <div class="layout-images">
-            <div class="grid-item" onclick="openModal(0)">
+    <!-- Ana Görünüm -->
+    <div class="main-layout">
+        <!-- Sol: İlk Resim -->
+        <div class="image-section">
+            <h2 class="section-title">Zemin Kat</h2>
+            <div class="main-image" onclick="openModal(0)">
                 <div class="item-inner">
-                    <img src="/img/yerlesim1.jpeg" alt="Yerleşim Planı 1" loading="lazy">
-                    <div class="hover-effect">
-                        <i class="fas fa-expand"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item" onclick="openModal(1)">
-                <div class="item-inner">
-                    <img src="/img/yerlesim2.jpeg" alt="Yerleşim Planı 2" loading="lazy">
-                    <div class="hover-effect">
-                        <i class="fas fa-expand"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item" onclick="openModal(2)">
-                <div class="item-inner">
-                    <img src="/img/yerlesim3.jpeg" alt="Yerleşim Planı 3" loading="lazy">
-                    <div class="hover-effect">
-                        <i class="fas fa-expand"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item" onclick="openModal(3)">
-                <div class="item-inner">
-                    <img src="/img/yerlesim4.jpeg" alt="Yerleşim Planı 4" loading="lazy">
+                    <img src="/img/yerlesim1.jpeg" alt="Zemin Kat Yerleşim Planı">
                     <div class="hover-effect">
                         <i class="fas fa-expand"></i>
                     </div>
@@ -41,81 +19,105 @@
             </div>
         </div>
 
-        <!-- Sağ Taraf - Liste -->
-        <div class="layout-list">
+        <!-- Sağ: Liste -->
+        <div class="list-section">
+            <h2 class="section-title">Zemin Kat Yerleşim Listesi</h2>
             <div class="list-container">
-                <div class="list-item"><strong>K1:</strong> Ulaştırma Bakanlığı</div>
-                <div class="list-item"><strong>K2:</strong> Ulaştırma Bakanlığı</div>
-                <div class="list-item"><strong>K3:</strong> -</div>
-                <div class="list-item"><strong>K4:</strong> -</div>
-                <div class="list-item"><strong>K5:</strong> -</div>
-                <div class="list-item"><strong>K6:</strong> -</div>
-                <div class="list-item"><strong>K7:</strong> İşkur</div>
-                <div class="list-item"><strong>K8:</strong> Habitat</div>
-                <div class="list-item"><strong>K9:</strong> -</div>
-                <div class="list-item"><strong>K10:</strong> -</div>
-                <div class="list-item"><strong>K11:</strong> Enerji ve Tabii Kaynaklar Bakanlığı</div>
-                <div class="list-item"><strong>K12:</strong> Darphane</div>
-                <div class="list-item"><strong>K13:</strong> Konya İKT</div>
-                <div class="list-item"><strong>K14:</strong> Sanayi ve Teknoloji Bakanlığı Konya İl Müdürlüğü</div>
-                <div class="list-item"><strong>K15:</strong> Konya Sosyal Güvenlik İl Müdürlüğü</div>
-                <div class="list-item"><strong>K16:</strong> Türkiye Kömür İşletmeleri</div>
-                <div class="list-item"><strong>K17:</strong> TEDAŞ</div>
-                <div class="list-item"><strong>K18:</strong> AL BARAKA</div>
-                <div class="list-item"><strong>K19:</strong> T.C. Ticaret Bakanlığı</div>
-                <div class="list-item"><strong>K20:</strong> -</div>
-                <div class="list-item"><strong>K21:</strong> Halk Sağlığı Konya İl Müdürlüğü</div>
-                <div class="list-item"><strong>K22:</strong> -</div>
-                <div class="list-item"><strong>K23:</strong> Halkbank</div>
-                <div class="list-item"><strong>K24:</strong> Halkbank</div>
-                <div class="list-item"><strong>K25:</strong> -</div>
-                <div class="list-item"><strong>K26:</strong> Ziraat Bankası</div>
-                <div class="list-item"><strong>K27:</strong> -</div>
-                <div class="list-item"><strong>K28:</strong> Türkiye Sermaye Piyasaları Birliği</div>
-                <div class="list-item"><strong>K29:</strong> -</div>
-                <div class="list-item"><strong>K30:</strong> BDDK</div>
-                <div class="list-item"><strong>K31:</strong> Sermaye Piyasası Kurulu</div>
-                <div class="list-item"><strong>K32:</strong> Konya Büyükşehir Belediyesi Şehir Estetiği Müdürlüğü</div>
-                <div class="list-item"><strong>K33:</strong> -</div>
-                <div class="list-item"><strong>K34:</strong> -</div>
-                <div class="list-item"><strong>K35:</strong> -</div>
-                <div class="list-item"><strong>K36:</strong> Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı</div>
-                <div class="list-item"><strong>K37:</strong> -</div>
-                <div class="list-item"><strong>K38:</strong> -</div>
-                <div class="list-item"><strong>K39:</strong> -</div>
-                <div class="list-item"><strong>K40:</strong> Vakıflar Genel Müdürlüğü</div>
-                <div class="list-item"><strong>K41:</strong> -</div>
-                <div class="list-item"><strong>K42:</strong> Emlak Katılım Bankası</div>
-                <div class="list-item"><strong>K43:</strong> -</div>
-                <div class="list-item"><strong>K44:</strong> -</div>
-                <div class="list-item"><strong>K45:</strong> -</div>
-                <div class="list-item"><strong>K46:</strong> Konya Büyükşehir Belediyesi</div>
-                <div class="list-item"><strong>K47:</strong> -</div>
-                <div class="list-item"><strong>K48:</strong> Selçuk Üniversitesi</div>
+                <div class="list-inner">
+                    <div class="list-item"><strong>K1:</strong> Ulaştırma Bakanlığı</div>
+                    <div class="list-item"><strong>K2:</strong> Ulaştırma Bakanlığı</div>
+                    <div class="list-item"><strong>K3:</strong> -</div>
+                    <div class="list-item"><strong>K4:</strong> -</div>
+                    <div class="list-item"><strong>K5:</strong> -</div>
+                    <div class="list-item"><strong>K6:</strong> -</div>
+                    <div class="list-item"><strong>K7:</strong> İşkur</div>
+                    <div class="list-item"><strong>K8:</strong> Habitat</div>
+                    <div class="list-item"><strong>K9:</strong> -</div>
+                    <div class="list-item"><strong>K10:</strong> -</div>
+                    <div class="list-item"><strong>K11:</strong> Enerji ve Tabii Kaynaklar Bakanlığı</div>
+                    <div class="list-item"><strong>K12:</strong> Darphane</div>
+                    <div class="list-item"><strong>K13:</strong> Konya İKT</div>
+                    <div class="list-item"><strong>K14:</strong> Sanayi ve Teknoloji Bakanlığı Konya İl Müdürlüğü</div>
+                    <div class="list-item"><strong>K15:</strong> Konya Sosyal Güvenlik İl Müdürlüğü</div>
+                    <div class="list-item"><strong>K16:</strong> Türkiye Kömür İşletmeleri</div>
+                    <div class="list-item"><strong>K17:</strong> TEDAŞ</div>
+                    <div class="list-item"><strong>K18:</strong> AL BARAKA</div>
+                    <div class="list-item"><strong>K19:</strong> T.C. Ticaret Bakanlığı</div>
+                    <div class="list-item"><strong>K20:</strong> -</div>
+                    <div class="list-item"><strong>K21:</strong> Halk Sağlığı Konya İl Müdürlüğü</div>
+                    <div class="list-item"><strong>K22:</strong> -</div>
+                    <div class="list-item"><strong>K23:</strong> Halkbank</div>
+                    <div class="list-item"><strong>K24:</strong> Halkbank</div>
+                    <div class="list-item"><strong>K25:</strong> -</div>
+                    <div class="list-item"><strong>K26:</strong> Ziraat Bankası</div>
+                    <div class="list-item"><strong>K27:</strong> -</div>
+                    <div class="list-item"><strong>K28:</strong> Türkiye Sermaye Piyasaları Birliği</div>
+                    <div class="list-item"><strong>K29:</strong> -</div>
+                    <div class="list-item"><strong>K30:</strong> BDDK</div>
+                    <div class="list-item"><strong>K31:</strong> Sermaye Piyasası Kurulu</div>
+                    <div class="list-item"><strong>K32:</strong> Konya Büyükşehir Belediyesi Şehir Estetiği Müdürlüğü</div>
+                    <div class="list-item"><strong>K33:</strong> -</div>
+                    <div class="list-item"><strong>K34:</strong> -</div>
+                    <div class="list-item"><strong>K35:</strong> -</div>
+                    <div class="list-item"><strong>K36:</strong> Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı</div>
+                    <div class="list-item"><strong>K37:</strong> -</div>
+                    <div class="list-item"><strong>K38:</strong> -</div>
+                    <div class="list-item"><strong>K39:</strong> -</div>
+                    <div class="list-item"><strong>K40:</strong> Vakıflar Genel Müdürlüğü</div>
+                    <div class="list-item"><strong>K41:</strong> -</div>
+                    <div class="list-item"><strong>K42:</strong> Emlak Katılım Bankası</div>
+                    <div class="list-item"><strong>K43:</strong> -</div>
+                    <div class="list-item"><strong>K44:</strong> -</div>
+                    <div class="list-item"><strong>K45:</strong> -</div>
+                    <div class="list-item"><strong>K46:</strong> Konya Büyükşehir Belediyesi</div>
+                    <div class="list-item"><strong>K47:</strong> -</div>
+                    <div class="list-item"><strong>K48:</strong> Selçuk Üniversitesi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alt Resimler -->
+    <div class="other-images">
+        <div class="image-item">
+            <h2 class="section-title">Anadolu Oditoryum -1. Kat</h2>
+            <div class="grid-image" onclick="openModal(1)">
+                <div class="item-inner">
+                    <img src="/img/yerlesim2.jpeg" alt="Anadolu Oditoryum">
+                    <div class="hover-effect">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-item">
+            <h2 class="section-title">Kubad Abad</h2>
+            <div class="grid-image" onclick="openModal(2)">
+                <div class="item-inner">
+                    <img src="/img/yerlesim3.jpeg" alt="Kubad Abad">
+                    <div class="hover-effect">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Modal -->
     <div class="modal" id="imageModal">
-        <span class="close-modal">
-            <i class="fas fa-times"></i>
-        </span>
+        <span class="close-modal"><i class="fas fa-times"></i></span>
         <img id="modal-image" src="" alt="Detaylı Görünüm">
-        <button class="nav-button prev">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nav-button next">
-            <i class="fas fa-chevron-right"></i>
-        </button>
+        <button class="nav-button prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-button next"><i class="fas fa-chevron-right"></i></button>
     </div>
 </div>
 
 <style>
     .layout-wrapper {
-        width: min(1400px, 95%);
+        max-width: 1400px;
         margin: 2rem auto;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
 
     .layout-header {
@@ -127,9 +129,9 @@
             font-size: 2.5rem;
             font-weight: 600;
             color: #1a1a1a;
+            margin-bottom: 1rem;
             position: relative;
             display: inline-block;
-            margin-bottom: 1rem;
         }
 
             .layout-header h1::after {
@@ -144,25 +146,32 @@
                 border-radius: 2px;
             }
 
-    .layout-content {
+    .main-layout {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        color: #059669;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    .image-section, .list-section {
         background: #fff;
         padding: 1.5rem;
         border-radius: 8px;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
-    /* Sol taraf - Resimler */
-    .layout-images {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .grid-item {
+    .main-image, .grid-image {
         aspect-ratio: 4/3;
+        width: 100%;
         cursor: pointer;
     }
 
@@ -171,7 +180,7 @@
         height: 100%;
         border-radius: 4px;
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         transition: transform 0.2s ease;
     }
 
@@ -179,21 +188,16 @@
             transform: translateY(-2px);
         }
 
-    .grid-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .grid-item:hover img {
-        transform: scale(1.05);
-    }
+        .item-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
     .hover-effect {
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0,0,0,0.3);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -206,21 +210,28 @@
             font-size: 1.5rem;
         }
 
-    .grid-item:hover .hover-effect {
+    .item-inner:hover .hover-effect {
         opacity: 1;
     }
 
-    /* Sağ taraf - Liste */
-    .layout-list {
-        overflow-y: auto;
-        padding-right: 1rem;
-        padding-right: 0;
+    .list-section {
+        height: fit-content;
     }
 
     .list-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        height: 0;
+        padding-bottom: 75%; /* 4:3 aspect ratio */
+        position: relative;
+    }
+
+    .list-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        padding-right: 0.5rem;
     }
 
     .list-item {
@@ -229,6 +240,7 @@
         border-radius: 4px;
         font-size: 0.95rem;
         color: #1e293b;
+        margin-bottom: 0.5rem;
         transition: background-color 0.2s ease;
     }
 
@@ -241,12 +253,38 @@
             margin-right: 0.5rem;
         }
 
-    /* Modal Styles */
+    .other-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .image-item {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .list-inner::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .list-inner::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 3px;
+    }
+
+    .list-inner::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+    }
+
     .modal {
         display: none;
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.92);
+        background: rgba(0,0,0,0.92);
         z-index: 1000;
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -281,7 +319,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255,255,255,0.1);
         border: none;
         color: white;
         width: 40px;
@@ -301,31 +339,37 @@
             right: 1rem;
         }
 
-    /* Responsive */
     @@media (max-width: 992px) {
-        .layout-content
+        .main-layout, .other-images
 
     {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
-    .layout-images {
-        max-width: 600px;
-        margin: 0 auto;
+    .list-container {
+        height: 400px;
+        padding-bottom: 0;
     }
 
-    .layout-list {
-            padding-right: 0;
-        }
+    .list-inner {
+        position: static;
+    }
 
     }
 
     @@media (max-width: 576px) {
-        .layout-header h1
+        .layout-wrapper
 
     {
+        padding: 0 1rem;
+    }
+
+    .layout-header h1 {
         font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
     }
 
     .list-item {
@@ -335,13 +379,11 @@
 
     }
 </style>
-
 <script>
     const images = [
         '/img/yerlesim1.jpeg',
         '/img/yerlesim2.jpeg',
-        '/img/yerlesim3.jpeg',
-        '/img/yerlesim4.jpeg'
+        '/img/yerlesim3.jpeg'
     ];
     let currentIndex = 0;
     const modal = document.getElementById('imageModal');
@@ -379,10 +421,17 @@
     // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
         if (!modal.classList.contains('show')) return;
+
         switch(e.key) {
-            case 'ArrowLeft': showImage(-1); break;
-            case 'ArrowRight': showImage(1); break;
-            case 'Escape': closeModal(); break;
+            case 'ArrowLeft':
+                showImage(-1);
+                break;
+            case 'ArrowRight':
+                showImage(1);
+                break;
+            case 'Escape':
+                closeModal();
+                break;
         }
     });
 </script>
