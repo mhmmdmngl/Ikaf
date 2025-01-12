@@ -2,16 +2,26 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+    background: linear-gradient(-45deg, rgba(35, 222, 224, 0.05), rgba(254, 203, 21, 0.05));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    border-radius: 12px;
 }
 
 .duzenlemekurulu-title {
     text-align: center;
-    color: #002147;
-    font-size: 1.8em;
+    font-size: 2.2em;
     margin-bottom: 30px;
     position: relative;
-    font-weight: 600;
+    font-weight: 700;
     padding-bottom: 10px;
+    background: linear-gradient(45deg, #23dee0 0%, #fecb15 50%, #23dee0 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 3s ease infinite;
 }
 
     .duzenlemekurulu-title:after {
@@ -20,10 +30,38 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 60px;
-        height: 2px;
-        background: #002147;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, #23dee0, #fecb15);
     }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 /* Top sections stil */
 .top-sections .section {
@@ -58,7 +96,7 @@
 }
 
 .section-title {
-    background: #002147;
+    background: linear-gradient(135deg, #23dee0, #23dee0);
     color: white;
     padding: 8px 12px;
     font-size: 0.9em;
@@ -114,6 +152,7 @@
     margin-bottom: 4px;
     display: flex;
     align-items: center;
+
 }
 
 .grid-sections .member-name {
