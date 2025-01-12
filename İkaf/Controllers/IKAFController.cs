@@ -62,6 +62,14 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult Haberler()
+        {
+            return View();
+        }
+        public IActionResult Sponsorlar()
+        {
+            return View();
+        }
         public IActionResult YerlesimPlan()
         {
             return View();
