@@ -916,4 +916,19 @@
         new Swiper('.ikaf-swiper', swiperOptions);
         new Swiper('.kariyer-swiper', swiperOptions);
     });
+        // Sayfanın herhangi bir yerinde bu JavaScript kodunu kullanabilirsiniz
+    document.addEventListener('DOMContentLoaded', function() {
+        const sponsorButton = document.querySelector('a[href="#sponsorlar"]');
+
+        sponsorButton.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const sponsorSection = document.getElementById('sponsorlar');
+
+            sponsorSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
 </script>
