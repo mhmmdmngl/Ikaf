@@ -66,5 +66,19 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult KilavuzIndir()
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "docs", "IKAF_Sponsor_Katilimci_Kilavuzu.pdf");
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound("Kılavuz dosyası bulunamadı.");
+            }
+
+            var fileName = "IKAF_Sponsor_Katilimci_Kilavuzu.pdf";
+            var mimeType = "application/pdf";
+
+            return PhysicalFile(filePath, mimeType, fileName);
+        }
     }
 }
