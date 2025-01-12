@@ -1,6 +1,119 @@
 ﻿@{
     ViewData["Title"] = "Ana Sayfa";
 }
+
+<style>
+    .supporters-section {
+        padding: 40px 0;
+        background: linear-gradient(to right, rgba(35, 222, 224, 0.05), rgba(254, 203, 21, 0.05));
+        margin: 20px 0;
+    }
+
+    .supporters-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .supporter-item {
+        position: relative;
+        width: 200px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        animation: floatAnimation 3s infinite ease-in-out;
+    }
+
+        .supporter-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .supporter-item:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .supporter-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(35, 222, 224, 0.15);
+        }
+
+    .supporter-logo {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        transition: all 0.3s ease;
+    }
+
+    .supporter-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(35, 222, 224, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+        .supporter-overlay span {
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-align: center;
+            padding: 10px;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+    .supporter-item:hover .supporter-overlay {
+        opacity: 1;
+    }
+
+        .supporter-item:hover .supporter-overlay span {
+            transform: translateY(0);
+        }
+
+    @@keyframes floatAnimation {
+        0%, 100%
+
+    {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    }
+
+    @@media (max-width: 768px) {
+        .supporters-container
+
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .supporter-item {
+        width: 180px;
+        height: 100px;
+    }
+
+    }
+</style>
 <section class="quick-buttons-section">
     <div class="quick-buttons-container">
         <div class="quick-buttons-row">
@@ -56,6 +169,29 @@
         <div class="swiper-button-next"></div>
     </div>
 </div>
+<!-- Destekçiler Section -->
+<section class="supporters-section">
+    <div class="supporters-container">
+        <div class="supporter-item">
+            <img src="~/img/logo/valilik-logo.png" alt="Konya Valiliği" class="supporter-logo" />
+            <div class="supporter-overlay">
+                <span>Konya Valiliği</span>
+            </div>
+        </div>
+        <div class="supporter-item">
+            <img src="~/img/logo/konya_büyükşehir_belediyesi_logosu.png" alt="Konya Büyükşehir Belediyesi" class="supporter-logo" />
+            <div class="supporter-overlay">
+                <span>Konya Büyükşehir Belediyesi</span>
+            </div>
+        </div>
+        <div class="supporter-item">
+            <img src="~/img/logo/iskur.png" alt="İŞKUR" class="supporter-logo" />
+            <div class="supporter-overlay">
+                <span>İŞKUR</span>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Hızlı Erişim Bölümü -->
 @* <section class="quick-access">
