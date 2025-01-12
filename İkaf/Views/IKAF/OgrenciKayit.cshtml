@@ -1,0 +1,136 @@
+﻿<main class="registration-content">
+    <section class="registration-header">
+        <h1>KAYIT OL</h1>
+        <h2 class="student-type">Öğrenci / Mezun</h2>
+    </section>
+
+    <section class="registration-steps">
+        <div class="steps-container">
+            <div class="step">
+                <h3>Adım 1:</h3>
+                <p>Tüm katılımcıların aşağıdaki butona tıklayarak sisteme kayıt olması gerekmektedir.</p>
+                <a href="https://www.yetenekkapisi.org/register/" class="register-btn">Şimdi Kayıt Ol</a>
+            </div>
+
+            <div class="step">
+                <h3>Adım 2:</h3>
+                <p>Yetenek kapısı platformundan gelen e-postadaki aktivasyon bağlantısına mutlaka tıklayınız.</p>
+            </div>
+
+            <div class="step">
+                <h3>Adım 3:</h3>
+                <p>Kaydolduktan sonra <a href="https://yetenekkapisi.org/" target="_blank">yetenekkapisi.org</a> adresinden giriş yapınız.</p>
+            </div>
+
+            <div class="step">
+                <h3>Adım 4:</h3>
+                <p>Soldaki menüden 'Kariyer Fuarı' sekmesine tıklayınız.</p>
+            </div>
+
+            <div class="step">
+                <h3>Adım 5:</h3>
+                <p>Açılan sayfada kariyer fuarları listelenmektedir. Katılmak istediğiniz fuarın 'Eylemler' başlığı altındaki 'İncele' butonuna tıklayınız.</p>
+            </div>
+
+            <div class="step">
+                <h3>Adım 6:</h3>
+                <p>Açılan sayfada sağ üstte bulunan butonuna tıklayınız. Fuara başvurunuz tamamlanmış olacaktır.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration-image">
+        <img src="/img/kayitsureci.png" alt="Kayıt Süreci Şeması" class="process-image">
+    </section>
+
+    <style>
+        .registration-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .registration-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+            .registration-header h1 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+        .student-type {
+            font-size: 1.8rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .steps-container {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .step {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .step h3 {
+                color: #1a73e8;
+                margin-bottom: 1rem;
+            }
+
+        .register-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff0f7b, #f89b29);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 15, 123, 0.2);
+        }
+
+            .register-btn:hover {
+                background: linear-gradient(45deg, #f89b29, #ff0f7b);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(255, 15, 123, 0.3);
+            }
+
+        .registration-image {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .process-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        @@media (min-width: 768px) {
+            .steps-container
+
+        {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        }
+
+        @@media (min-width: 1024px) {
+            .steps-container
+
+        {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        }
+    </style>
+</main>

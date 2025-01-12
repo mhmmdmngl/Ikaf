@@ -44,5 +44,9 @@ namespace İkaf.Controllers
         {
             return View();
         }
+        public IActionResult OgrenciKayit()
+        {
+            return View();
+        }
     }
 }
