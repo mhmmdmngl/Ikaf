@@ -258,18 +258,69 @@
 
     }
 </style>
-<section class="quick-buttons-section">
-    <div class="quick-buttons-container">
-        <div class="quick-buttons-row">
-            <div class="quick-button-wrapper">
-                <a href="#sponsorlar" class="quick-button">
-                    <i class="fas fa-handshake"></i>
-                    SPONSORLAR
-                </a>
-            </div>
-        </div>
+<!-- Yeni Sponsor Butonu -->
+<!-- Instagram Stili Button -->
+<div class="insta-nav">
+    <div class="insta-container">
+        <a href="#sponsorlar" class="insta-button">
+            <span class="insta-icon">
+                <i class="fas fa-handshake"></i>
+            </span>
+            <span class="insta-text">SPONSORLAR</span>
+        </a>
     </div>
-</section>
+</div>
+
+<style>
+    .insta-nav {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .insta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 32px;
+        background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+        border-radius: 50px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(131, 58, 180, 0.3);
+    }
+
+        .insta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(131, 58, 180, 0.4);
+            background: linear-gradient(45deg, #fcb045, #fd1d1d, #833ab4);
+        }
+
+    .insta-icon {
+        font-size: 1.2rem;
+    }
+
+    .insta-text {
+        font-size: 1rem;
+    }
+
+    @@media (max-width: 768px) {
+        .insta-button
+
+    {
+        padding: 12px 24px;
+    }
+
+    .insta-text {
+        font-size: 0.9rem;
+    }
+
+    }
+</style>
 
 <!-- Slider Bölümü -->
 <div class="slider-container">
