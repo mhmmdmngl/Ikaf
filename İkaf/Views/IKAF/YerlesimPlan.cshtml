@@ -170,7 +170,7 @@
             <h2 class="section-title">Anadolu Oditoryum -1. Kat</h2>
             <div class="main-image" onclick="openModal(2)">
                 <div class="item-inner">
-                    <img src="/img/yerlesim3.jpeg" alt="Anadolu Oditoryum">
+                    <img src="/img/yerlesim4.jpeg" alt="Anadolu Oditoryum">
                     <div class="hover-effect">
                         <i class="fas fa-expand"></i>
                     </div>
@@ -245,7 +245,7 @@
         </div>
     </div>
 </div>
-                        <strong>
+<div>
     <!-- Modal -->
     <div class="modal" id="imageModal">
         <span class="close-modal"><i class="fas fa-times"></i></span>
@@ -254,7 +254,6 @@
         <button class="nav-button next"><i class="fas fa-chevron-right"></i></button>
     </div>
 </div>
-
 <style>
     .layout-wrapper {
         max-width: 1400px;
@@ -295,25 +294,26 @@
         margin-bottom: 2rem;
     }
 
-        .section-title {
-            font-size: 1.25rem;
-            color: #ffffff;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border-radius: 4px;
-            background: #665200; /* Daha koyu ton */
-        }
+    .section-title {
+        font-size: 1.25rem;
+        color: #ffffff;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 4px;
+        background: #665200;
+    }
 
-        /* Diğer stil güncellemeleri */
-        .image-section, .list-section {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
+    .image-section,
+    .list-section {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
 
-    .main-image, .grid-image {
+    .main-image,
+    .grid-image {
         aspect-ratio: 4/3;
         width: 100%;
         cursor: pointer;
@@ -376,6 +376,7 @@
         bottom: 0;
         overflow-y: auto;
         padding-right: 0.5rem;
+        -webkit-overflow-scrolling: touch;
     }
 
     .list-item {
@@ -392,11 +393,11 @@
             background: #f1f5f9;
         }
 
-            .list-item strong {
-                color: #846A00;
-                margin-right: 0.5rem;
-                font-weight: 600;
-            }
+        .list-item strong {
+            color: #846A00;
+            margin-right: 0.5rem;
+            font-weight: 600;
+        }
 
     .other-images {
         display: grid;
@@ -411,6 +412,7 @@
         box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
+    /* Scrollbar Styles */
     .list-inner::-webkit-scrollbar {
         width: 6px;
     }
@@ -425,6 +427,7 @@
         border-radius: 3px;
     }
 
+    /* Modal Styles */
     .modal {
         display: none;
         position: fixed;
@@ -484,40 +487,46 @@
             right: 1rem;
         }
 
+    /* Responsive Styles */
     @@media (max-width: 992px) {
         .main-layout, .other-images
 
     {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .list-container {
-        height: 400px;
-        padding-bottom: 0;
+        height: 0;
+        padding-bottom: 75%;
+        position: relative;
     }
 
     .list-inner {
-        position: static;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
     }
 
+        .list-inner::-webkit-scrollbar {
+            width: 4px;
+        }
+
     }
 
-        @@media (max-width: 576px) {
-            .section-title
+    @@media (max-width: 576px) {
+        .layout-header h1
 
-        {
-            font-size: 1.1rem;
-            padding: 0.75rem;
-        }
-
-        }
-
-    .layout-header h1 {
+    {
         font-size: 2rem;
     }
 
     .section-title {
         font-size: 1.1rem;
+        padding: 0.75rem;
     }
 
     .list-item {
